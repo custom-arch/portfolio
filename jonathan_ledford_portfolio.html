@@ -1,0 +1,280 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jonathan Ledford | Product Manager Portfolio</title>
+
+  <!-- Google Font: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- AOS Animate on Scroll Library -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => AOS.init());
+  </script>
+
+  <style>
+    :root {
+      --primary: #3b82f6;
+      --background-start: #1e1e2f;
+      --background-end: #2e2e5f;
+      --text-light: #f1f5f9;
+      --text-muted: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, var(--background-start), var(--background-end));
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 1rem 2rem;
+      background: transparent;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: var(--text-light);
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    section {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 6rem 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+    }
+
+    .buttons a {
+      display: inline-block;
+      margin: 1.5rem 0.5rem 0;
+      background: var(--primary);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: transform 0.2s ease;
+    }
+
+    .buttons a:hover {
+      transform: scale(1.05);
+    }
+
+    .profile-img {
+      width: 180px;
+      border-radius: 50%;
+      margin-top: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+      max-width: 400px;
+      flex: 1;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    .card h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      color: var(--text-muted);
+    }
+
+    iframe {
+      border: none;
+      border-radius: 12px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      nav { flex-direction: column; align-items: flex-start; }
+      .card-container { flex-direction: column; align-items: center; }
+    }
+  </style>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Product Manager with a CS background and content creator mindset. Explore my case studies, Twitch growth journey, and impactful product work.">
+  <link rel="canonical" href="https://jonathanledford.com/" />
+
+  <!-- Accessibility -->
+  <meta name="theme-color" content="#0f172a" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Open Graph (Facebook, LinkedIn) -->
+  <meta property="og:title" content="Jonathan Ledford – Product Manager Portfolio" />
+  <meta property="og:description" content="From code to content to product strategy – discover my projects and experience." />
+  <meta property="og:image" content="https://jonathanledford.com/preview.png" />
+  <meta property="og:url" content="https://jonathanledford.com/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Jonathan Ledford – Product Manager Portfolio" />
+  <meta name="twitter:description" content="Certified Scrum Master, Agile-focused Product Manager, and Content Creator focused on building great things that make an impact." />
+  <meta name="twitter:image" content="https://jonathanledford.com/preview.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+</head>
+<body>
+  <header>
+    <nav>
+      <div><strong>Jonathan Ledford</strong></div>
+      <div>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#case-studies">Case Studies</a>
+        <a href="#twitch">Twitch</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero" data-aos="fade-up">
+    <h1>Jonathan Ledford</h1>
+    <p>Certified Scrum Master, Agile-focused Product Manager, and Content Creator focused on building great things that make an impact.</p>
+    <img src="profile_web_circular_adjusted.png" alt="Jonathan Ledford" class="profile-img" />
+    <div class="buttons">
+      <a href="https://docs.google.com/document/d/1w4RsSZnJ9Zto7Rrw3CbBp03ze3Cr95SdZF_WQguBk-Y/edit?usp=sharing">View Resume</a>
+      <a href="mailto:jon@jonathanledford.com">Contact Me</a>
+    </div>
+  </section>
+
+  <section id="about" data-aos="fade-up">
+    <h2 class="section-title">About Me</h2>
+    <p>I started in content, grew through code, and now lead as a Product Manager. With a background in Computer Science and a creator’s mindset, I blend technical insight and creative thinking to turn ideas into features people love.</p>
+  </section>
+
+  <section id="projects" data-aos="fade-up">
+    <h2 class="section-title">Projects</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>Blitz.gg Valorant Lineups</h3>
+        <p>Launched a feature used by 2.5 million monthly users; collaborated with engineering and UX teams to iterate based on community feedback.</p>
+        <a href="https://www.blitz.gg/valorant/lineups" style="color: var(--primary); text-decoration: underline;">View Project</a>
+      </div>
+      <div class="card">
+        <h3>Twitch Partner Journey</h3>
+        <p>Grew a community from scratch to Twitch Partner status, engaging over 55,000 monthly messages and reaching peaks of 2,000 concurrent viewers through consistent content and strategic community-building.</p>
+        <a href="https://www.twitch.tv/custom" style="color: var(--primary); text-decoration: underline;">Visit Channel</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="case-studies" data-aos="fade-up">
+    <h2 class="section-title">Case Studies</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>Blitz.gg Valorant Lineups</h3>
+        <p>As a Product Manager at Blitz.gg, I led strategy and agile delivery for a platform with over 2.5M monthly users. Our goal was to enhance the Valorant player experience by providing highly curated lineup videos directly within the desktop app.</p>
+        <a href="case-blitz.html" style="color: var(--primary); text-decoration: underline;">Read More</a>
+      </div>
+      <div class="card">
+        <h3>Twitch Partner</h3>
+        <p>As an independent content creator, I developed and scaled a personal Twitch brand that reached Partner status. My channel focused on gaming, tech, and immersive character-based content, growing an engaged audience through strategic outreach and high-quality production.</p>
+        <a href="case-twitch.html" style="color: var(--primary); text-decoration: underline;">Read More</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="twitch" data-aos="fade-up">
+    <h2 class="section-title">Twitch Stream</h2>
+    <p style="text-align:center; color: var(--text-muted);">Check out my latest content and live streams.</p>
+    <div style="text-align: center; margin-top: 1rem;">
+      <iframe src="https://player.twitch.tv/?channel=custom&parent=jonathanledford.com" height="300" width="480" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <section id="contact" data-aos="fade-up">
+    <h2 class="section-title">Contact Me</h2>
+    <p style="text-align:center;">📬 Reach me at <a href="mailto:jon@jonathanledford.com" style="color: var(--primary);">jon@jonathanledford.com</a></p>
+  </section>
+
+  
+  <style>footer a:hover { transform: scale(1.2); transition: transform 0.3s ease; }</style>
+<footer style="text-align: center; padding: 2rem; color: var(--text-muted); font-size: 1rem; border-top: 1px solid #334155;">
+    <p style="margin-bottom: 1rem;">© 2025 Jonathan Ledford</p>
+    <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; font-size: 1.5rem;">
+      <a href="mailto:jon@jonathanledford.com" target="_blank" title="Email" style="color: var(--text-muted);"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/jonledford" target="_blank" title="LinkedIn" style="color: var(--text-muted);"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/custom-arch" target="_blank" title="GitHub" style="color: var(--text-muted);"><i class="fab fa-github"></i></a>
+      <a href="https://docs.google.com/document/d/1w4RsSZnJ9Zto7Rrw3CbBp03ze3Cr95SdZF_WQguBk-Y/edit?usp=sharing" target="_blank" title="Resume" style="color: var(--text-muted);"><i class="fas fa-file-alt"></i></a>
+      <a href="https://www.twitch.tv/custom" target="_blank" title="Twitch" style="color: var(--text-muted);"><i class="fab fa-twitch"></i></a>
+      </div>
+  </footer>
+</body>
+</html>
+
+</html>
