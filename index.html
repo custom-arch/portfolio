@@ -1,23 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   Jonathan Ledford | Product Manager Portfolio
-  </title>
-  <!-- Google Font: Inter -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
-  <!-- Font Awesome for Icons -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
-  <!-- AOS Animate on Scroll Library -->
-  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet"/>
-  <script src="https://unpkg.com/aos@next/dist/aos.js">
-  </script>
-  <script>
+
+<html lang="en" style="scroll-behavior: smooth;">
+<head><link as_="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="preload"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jonathan Ledford – Technical Product Manager | Scrum Master, Partner &amp; Community Leader</title>
+<!-- Google Font: Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Font Awesome for Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<!-- AOS Animate on Scroll Library -->
+<link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet"/>
+<script src="https://unpkg.com/aos@next/dist/aos.js">
+</script>
+<script>
    document.addEventListener("DOMContentLoaded", () => AOS.init());
   </script>
-  <style>
+<style>
    :root {
       --primary: #3b82f6;
       --background-start: #1e1e2f;
@@ -41,7 +40,8 @@
 
     header {
       padding: 1rem 2rem;
-      background: transparent;
+      background: rgba(30, 30, 47, 0.95);
+      backdrop-filter: blur(8px);
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -72,7 +72,7 @@
 
     .hero {
       text-align: center;
-      padding: 6rem 2rem;
+      padding: 7.5rem 2rem 4rem;
     }
 
     .hero h1 {
@@ -202,375 +202,454 @@
   margin-top: -0.4rem;
   margin-bottom: 0.6rem;
 }
-  </style>
-  <!-- SEO Meta -->
-  <meta content="Product Manager with a CS background and content creator mindset. Explore my case studies, Twitch growth journey, and impactful product work." name="description"/>
-  <link href="https://jonathanledford.com/" rel="canonical"/>
-  <!-- Accessibility -->
-  <meta content="#0f172a" name="theme-color"/>
-  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-  <!-- Open Graph (Facebook, LinkedIn) -->
-  <meta content="Jonathan Ledford – Product Manager Portfolio" property="og:title"/>
-  <meta content="From code to content to product strategy – discover my projects and experience." property="og:description"/>
-  <meta content="https://jonathanledford.com/preview.png" property="og:image"/>
-  <meta content="https://jonathanledford.com/" property="og:url"/>
-  <meta content="website" property="og:type"/>
-  <!-- Twitter Card -->
-  <meta content="summary_large_image" name="twitter:card"/>
-  <meta content="Jonathan Ledford – Product Manager Portfolio" name="twitter:title"/>
-  <meta content="Certified Scrum Master, Agile-focused Product Manager, and Content Creator focused on building great things that make an impact." name="twitter:description"/>
-  <meta content="https://jonathanledford.com/preview.png" name="twitter:image"/>
-  <!-- Favicon -->
-  <link href="favicon.ico" rel="icon" type="image/x-icon"/>
- </head>
- <body>
-  <header>
-   <nav>
-    <div>
-     <strong>
+  
+.scroll-down i {
+  animation: bounce 2s infinite;
+  font-size: 1.5rem;
+  opacity: 0.7;
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+.buttons a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px var(--primary);
+}
+.card:hover {
+  background-color: rgba(255, 255, 255, 0.07);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, var(--background-start), var(--background-end));
+  color: var(--text-light);
+  line-height: 1.6;
+}
+nav a.active {
+  color: var(--primary);
+  text-decoration: underline;
+}
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  opacity: 0.8;
+  z-index: 1001;
+}
+#backToTop:hover {
+  opacity: 1;
+}
+</style>
+<!-- SEO Meta -->
+<meta content="Technical Product Manager with a CS background and content creation expertise. Open to roles in product, agile, partnerships, and community management. Explore case studies, Twitch growth systems, and impactful delivery pipelines." name="description"/>
+<link href="https://jonathanledford.com/" rel="canonical"/>
+<!-- Accessibility -->
+<meta content="#0f172a" name="theme-color"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<!-- Open Graph (Facebook, LinkedIn) -->
+<meta content="Jonathan Ledford – Product Manager Portfolio" property="og:title"/>
+<meta content="From code to content to product strategy – discover my projects and experience." property="og:description"/>
+<meta content="https://jonathanledford.com/preview.png" property="og:image"/>
+<meta content="https://jonathanledford.com/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Jonathan Ledford – Product Manager Portfolio" name="twitter:title"/>
+<meta content="Certified Scrum Master, Agile-focused Product Manager, and Content Creator focused on building great things that make an impact." name="twitter:description"/>
+<meta content="https://jonathanledford.com/preview.png" name="twitter:image"/>
+<!-- Favicon -->
+<link href="favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+<header>
+<nav aria-label="Main Navigation" role="navigation">
+<div>
+<strong>
       Jonathan Ledford
      </strong>
-    </div>
-    <div>
-     <a href="#about">
+</div>
+<div>
+<a aria-label="Scroll to About" href="#about">
       About
      </a>
-     <a href="#projects">
+<a aria-label="Scroll to Projects" href="#projects">
       Projects
      </a>
-     <a href="#case-studies">
+<a aria-label="Scroll to Case Studies" href="#case-studies">
       Case Studies
      </a>
-     <a href="#twitch">
+<a aria-label="Scroll to Twitch" href="#twitch">
       Twitch
      </a>
-     <a href="#contact">
+<a aria-label="Scroll to Contact" href="#contact">
       Contact
      </a>
-    </div>
-   </nav>
-  </header>
-  <section class="hero" data-aos="fade-up">
-   <h1>
+</div>
+</nav>
+</header>
+<section class="hero" data-aos="fade-up">
+<h1>
     Jonathan Ledford
    </h1>
-   <p>
+<p>
     Certified Scrum Master, Agile-focused Product Manager, and Content Creator focused on building great things that make an impact.
    </p>
-   <a href="https://www.linkedin.com/in/jonathanledford/" rel="noopener noreferrer" target="_blank">
-    <img alt="Jonathan Ledford" class="profile-img" data-aos="zoom-in" src="profile_web_circular_adjusted.png"/>
-   </a>
-   <div class="buttons">
-    <a href="https://docs.google.com/document/d/1w4RsSZnJ9Zto7Rrw3CbBp03ze3Cr95SdZF_WQguBk-Y/edit?usp=sharing">
+<a href="https://www.linkedin.com/in/jonledford/" rel="noopener noreferrer" target="_blank">
+<img alt="Jonathan Ledford" class="profile-img" data-aos="zoom-in" src="profile_web_circular_adjusted.png"/>
+</a>
+<div class="buttons">
+<a href="https://docs.google.com/document/d/1w4RsSZnJ9Zto7Rrw3CbBp03ze3Cr95SdZF_WQguBk-Y/edit?usp=sharing">
      View Resume
     </a>
-    <a href="mailto:jon@jonathanledford.com">
+<a href="mailto:jon@jonathanledford.com">
      Contact Me
     </a>
-   </div>
-  </section>
-  <section data-aos="fade-up" id="about">
-   <h2 class="section-title">
+</div>
+<div class="scroll-down" style="text-align: center; margin-top: 1rem;">
+<i class="fas fa-chevron-down" style="animation: bounce 2s infinite; font-size: 1.5rem; opacity: 0.7;"></i>
+</div>
+</section>
+<section data-aos="fade-up" id="about">
+<h2 class="section-title">
     About Me
    </h2>
-   <p>
+<p>
     I started in content, grew through code, and now lead as a Product Manager. With a background in Computer Science and a creator’s mindset, I blend technical insight and creative thinking to turn ideas into features people love.
    </p>
-  </section>
-  <section data-aos="fade-up" id="projects">
-   <h2 class="section-title">
+</section>
+<section data-aos="fade-up" id="value">
+<h2 class="section-title">What I Bring to a Team</h2>
+<ul style="max-width: 800px; margin: 0 auto; padding: 0 1rem; list-style: none;">
+<li>🧠 Systems Thinking: I connect the dots between UX, data, and product goals.</li>
+<li>📈 Outcome-Driven: I ship value, not just features. 25%+ velocity boosts, improved retention, reduced churn.</li>
+<li>🎨 Creative Execution: From Twitch growth loops to in-app UX, I know how to build for humans.</li>
+<li>⚙️ Cross-Functional Glue: I collaborate across engineering, design, and marketing to deliver unified outcomes.</li>
+</ul>
+</section>
+<section data-aos="fade-up" id="projects">
+<p style="text-align:center; max-width: 700px; margin: 0 auto; color: var(--text-muted);">Explore key product, UX, and platform projects I’ve led from gameplay tools to creator-focused systems.</p><h2 class="section-title">
     Projects
    </h2>
-   <div class="card-container">
-    <div class="card">
-     <h3>
-      Lineup Features (Valorant &amp; CS)
-     </h3>
-     <p class="sublabel">
+<div class="card-container">
+<div class="card" data-aos="fade-up" data-aos-delay="0">
+<h3>Lineup Features (Valorant &amp; CS)</h3>
+<p class="sublabel">
       Blitz
      </p>
-     <div class="tags">
-      <span class="tag">
+<div class="tags">
+<span class="tag">
        Product
       </span>
-      <span class="tag">
+<span class="tag">
        UX
       </span>
-      <span class="tag">
+<span class="tag">
        Content
       </span>
-     </div>
-     <p>
+</div>
+<p>
       Created and scaled lineup features for Valorant and Counter-Strike at Blitz.gg. Built a content system delivering 1,000+ curated videos, including utility tutorials tailored to each game's meta. Collaborated on branded overlays, UX playback systems, and in-app content discovery. Supported user skill growth through visual-first learning experiences.
      </p>
-     <a class="project-link" href="case-blitz.html" style="color: var(--primary); text-decoration: underline;">
+<a class="project-link" href="case-blitz.html" style="color: var(--primary); text-decoration: underline;">
       View Case Study
      </a>
-    </div>
-    <div class="card">
-     <h3>
-      Blitz Product Delivery &amp; Content Engine
-     </h3>
-     <p class="sublabel">
+</div>
+<div class="card" data-aos="fade-right" data-aos-delay="100">
+<h3>Blitz Product Delivery &amp; Content Engine</h3>
+<p class="sublabel">
       Blitz
      </p>
-     <div class="tags">
-      <span class="tag">
+<div class="tags">
+<span class="tag">
        Product
       </span>
-      <span class="tag">
+<span class="tag">
        UX
       </span>
-      <span class="tag">
+<span class="tag">
        Agile
       </span>
-      <span class="tag">
+<span class="tag">
        Scrum
       </span>
-     </div>
-     <p>
+</div>
+<p>
       Directed full feature lifecycle across three agile teams, delivering 15+ product releases and boosting throughput by 25%. Built scalable systems for content creation, including branded overlays, review pipelines, and animations that cut production time by 30%. Improved triage, roadmaps, and team velocity while maintaining alignment with UX, engineering, and marketing stakeholders.
      </p>
-     <a class="project-link" href="case-blitz-product-delivery.html" style="color: var(--primary); text-decoration: underline;">
+<a class="project-link" href="case-blitz-product-delivery.html" style="color: var(--primary); text-decoration: underline;">
       View Case Study
      </a>
-    </div>
-    <div class="card">
-     <h3>
-      Stat &amp; Loadout Tools (Valorant)
-     </h3>
-     <p class="sublabel">
+</div>
+<div class="card" data-aos="fade-left" data-aos-delay="200">
+<h3>Stat &amp; Loadout Tools (Valorant)</h3>
+<p class="sublabel">
       Blitz
      </p>
-     <div class="tags">
-      <span class="tag">
+<div class="tags">
+<span class="tag">
        Product
       </span>
-      <span class="tag">
+<span class="tag">
        UX
       </span>
-      <span class="tag">
+<span class="tag">
        Data
       </span>
-     </div>
-     <p>
+</div>
+<p>
       Built data-driven tools for Valorant players to optimize performance and loadouts. Delivered match stats, improvement metrics, and benchmarks for skill tracking, while also designing a browsable interface for weapon and utility data like damage values and ability costs. Improved user retention through performance feedback and strategic decision support.
      </p>
-     <a class="project-link" href="https://www.blitz.gg/valorant/stats" style="color: var(--primary); text-decoration: underline;" >
+<a class="project-link" href="https://www.blitz.gg/valorant/stats" style="color: var(--primary); text-decoration: underline;">
       View Project
      </a>
-    </div>
-    <div class="card">
-     <h3>
-      Headshot Gallery Tool (Archived)
-     </h3>
-     <p class="sublabel">
+</div>
+<div class="card" data-aos="zoom-in" data-aos-delay="300">
+<h3>Headshot Gallery Tool (Archived)</h3>
+<p class="sublabel">
       Blitz
      </p>
-     <div class="tags">
-     <span class="tag">
+<div class="tags">
+<span class="tag">
        Product
       </span>
-      <span class="tag">
+<span class="tag">
        UX
       </span>
-      <span class="tag">
+<span class="tag">
        Content
       </span>
-     </div>
-     <p>
+</div>
+<p>
       Developed a precision training feature for Valorant that allowed users to visualize crosshair placement across key angles and maps. The tool boosted engagement and retention by delivering clear visual cues for head-level aim training.
      </p>
-     <a class="project-link" href="case-blitz-headshot-gallery.html" style="color: var(--primary); text-decoration: underline;">
+<a class="project-link" href="case-blitz-headshot-gallery.html" style="color: var(--primary); text-decoration: underline;">
       View Case Study
      </a>
-    </div>
-    <div class="card">
-     <h3>
-      Twitch Growth &amp; Content System
-     </h3>
-     <p class="sublabel">
+</div>
+<div class="card" data-aos="flip-up" data-aos-delay="400">
+<h3>Twitch Growth &amp; Content System</h3>
+<p class="sublabel">
       Twitch
      </p>
-     <div class="tags">
-      <span class="tag">
+<div class="tags">
+<span class="tag">
        Community
       </span>
-      <span class="tag">
+<span class="tag">
        Brand
       </span>
-      <span class="tag">
+<span class="tag">
        Content
       </span>
-     </div>
-     <p>
+</div>
+<p>
       Built and scaled a Twitch channel to Partner status, reaching 2,000 peak viewers and 55,000 monthly chat messages. Created growth loops across Twitch, TikTok, and YouTube using DaVinci Resolve for editing and strategic repurposing. Secured sponsorships from GamerSupps, HelloFresh, and others while maintaining a consistent publishing and streaming cadence.
      </p>
-     <a class="project-link" href="case-twitch.html" style="color: var(--primary); text-decoration: underline;">
+<a class="project-link" href="case-twitch.html" style="color: var(--primary); text-decoration: underline;">
       View Case Study
      </a>
-    </div>
-    <div class="card">
-     <h3>
-      Custom’s Arcade Platform &amp; Bot Automation
-     </h3>
-     <p class="sublabel">
+</div>
+<div class="card" data-aos="fade-up" data-aos-delay="0">
+<h3>Custom’s Arcade Platform &amp; Bot Automation</h3>
+<p class="sublabel">
       Personal Project
      </p>
-     <div class="tags">
-      <span class="tag">
+<div class="tags">
+<span class="tag">
        Infrastructure
       </span>
-      <span class="tag">
+<span class="tag">
        Community
       </span>
-      <span class="tag">
+<span class="tag">
        Product
       </span>
-     </div>
-     <p>
+</div>
+<p>
       Built and maintained a self-hosted gaming platform featuring Project Zomboid, Rust, and Minecraft servers. Developed a custom Discord bot for seasonal resets, player progression, rank syncing, and community management. Delivered a seamless user experience across gameplay and social layers through technical infrastructure and automation.
      </p>
-     <a class="project-link" href="https://www.customsarcade.com" style="color: var(--primary); text-decoration: underline;">
+<a class="project-link" href="https://www.customsarcade.com" style="color: var(--primary); text-decoration: underline;">
       View Project
      </a>
-    </div>
-    <div class="card">
-     <h3>
-      Personal Portfolio Website
-     </h3>
-     <p class="sublabel">
+</div>
+<div class="card" data-aos="fade-right" data-aos-delay="100">
+<h3>Portfolio Website</h3>
+<p class="sublabel">
       Personal Project
      </p>
-     <div class="tags">
-      <span class="tag">
+<div class="tags">
+<span class="tag">
        Infrastructure
       </span>
-      <span class="tag">
+<span class="tag">
        Brand
       </span>
-      <span class="tag">
+<span class="tag">
        UX
       </span>
-     </div>
-     <p>
+</div>
+<p>
       Designed and deployed a custom-built personal portfolio to showcase product case studies, growth metrics, and content strategy. Built with semantic HTML, custom CSS, and hosted via GitHub Pages with a custom domain and DNS integration.
      </p>
-     <a class="project-link" href="#" style="color: var(--primary); text-decoration: underline;">
+<a class="project-link" href="#" style="color: var(--primary); text-decoration: underline;">
       View Project
      </a>
-    </div>
-   </div>
-  </section>
-  <section data-aos="fade-up" id="case-studies">
-   <h2 class="section-title">
+</div>
+</div>
+</section>
+<section data-aos="fade-up" id="case-studies">
+<p style="text-align:center; max-width: 700px; margin: 0 auto; color: var(--text-muted);">These case studies dive deeper into how I solve problems, lead teams, and deliver impact at scale.</p><h2 class="section-title">
     Case Studies
    </h2>
-   <div class="card-container">
-    <!-- Case Study card for: Blitz.gg Valorant Lineups -->
-    <div class="card">
-     <h3>
-      Blitz.gg Valorant Lineups
+<div class="card-container">
+<!-- Case Study card for: Blitz.gg Valorant Lineups -->
+<div class="card" data-aos="fade-left" data-aos-delay="200">
+<h3>
+      How We Made Valorant Lineups More Accessible
      </h3>
-     <p>
+<p>
       As a Product Manager at Blitz.gg, I led strategy and agile delivery for a platform with over 2.5M monthly users. Our goal was to enhance the Valorant player experience by providing highly curated lineup videos directly within the desktop app.
      </p>
-     <a href="case-blitz.html" rel="noopener noreferrer" style="color: var(--primary); text-decoration: underline;" target="_blank">
+<a href="case-blitz.html" rel="noopener noreferrer" style="color: var(--primary); text-decoration: underline;" target="_blank">
       Read More
      </a>
-    </div>
-     <!-- Case Study card for: Blitz Headshot Gallery -->
-     <div class="card">
-     <h3>
+</div>
+<!-- Case Study card for: Blitz Headshot Gallery -->
+<div class="card" data-aos="zoom-in" data-aos-delay="300">
+<h3>
       Teaching Better Aim Without Saying a Word
      </h3>
-     <p>
+<p>
       Led the product vision for a visual-first gallery that helped FPS players internalize head-level aiming through 500+ annotated images, boosting retention and reducing user friction across learning curves.
      </p>
-     <a href="case-blitz-headshot-gallery.html" rel="noopener noreferrer" style="color: var(--primary); text-decoration: underline;" target="_blank">
+<a href="case-blitz-headshot-gallery.html" rel="noopener noreferrer" style="color: var(--primary); text-decoration: underline;" target="_blank">
       Read More
      </a>
-    </div>
-    <!-- Case Study card for: Blitz Product Delivery & Content Engine -->
-    <div class="card">
-     <h3>
+</div>
+<!-- Case Study card for: Blitz Product Delivery & Content Engine -->
+<div class="card" data-aos="flip-up" data-aos-delay="400">
+<h3>
       Taming Chaos: How We Rebuilt Blitz’s Delivery Pipeline
      </h3>
-     <p>
+<p>
       Overhauled feature delivery and content production across multiple game titles. Introduced systems that aligned product, content, and engineering, cutting delays and scaling output with zero added headcount.
      </p>
-     <a href="case-blitz-product-delivery.html" rel="noopener noreferrer" style="color: var(--primary); text-decoration: underline;" target="_blank">
+<a href="case-blitz-product-delivery.html" rel="noopener noreferrer" style="color: var(--primary); text-decoration: underline;" target="_blank">
       Read More
      </a>
-    </div>
-    <!-- Case Study card for: Twitch Partner -->
-    <div class="card">
-     <h3>
-      Twitch Partner
+</div>
+<!-- Case Study card for: Twitch Partner -->
+<div class="card" data-aos="fade-up" data-aos-delay="0">
+<h3>
+      How I Became Twitch Partner
      </h3>
-     <p>
+<p>
       As an independent content creator, I developed and scaled a personal Twitch brand that reached Partner status. My channel focused on gaming, tech, and immersive character-based content, growing an engaged audience through strategic outreach and high-quality production.
      </p>
-     <a href="case-twitch.html" rel="noopener noreferrer" style="color: var(--primary); text-decoration: underline;" target="_blank">
+<a href="case-twitch.html" rel="noopener noreferrer" style="color: var(--primary); text-decoration: underline;" target="_blank">
       Read More
      </a>
-    </div>
-   </div>
-  </section>
-  <section data-aos="fade-up" id="twitch">
-   <h2 class="section-title">
+</div>
+</div>
+</section>
+<section data-aos="fade-up" id="twitch">
+<h2 class="section-title">
     Twitch Stream
    </h2>
-   <p style="text-align:center; color: var(--text-muted);">
+<p style="text-align:center; color: var(--text-muted);">
     Check out my latest content and live streams.
    </p>
-   <div style="text-align: center; margin-top: 1rem;">
-    <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
-     <iframe allowfullscreen="true" height="300" src="https://player.twitch.tv/?channel=custom&amp;parent=jonathanledford.com" style="position:absolute;top:0;left:0;width:100%;height:100%;" width="480">
-     </iframe>
-    </div>
-   </div>
-  </section>
-  <section data-aos="fade-up" id="contact">
-   <h2 class="section-title">
+<div style="text-align: center; margin-top: 1rem;">
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+<iframe allowfullscreen="true" height="300" src="https://player.twitch.tv/?channel=custom&amp;parent=jonathanledford.com" style="position:absolute;top:0;left:0;width:100%;height:100%;" width="480">
+</iframe>
+</div>
+</div>
+</section>
+<section data-aos="fade-up" id="contact">
+<h2 class="section-title">
     Contact Me
    </h2>
-   <p style="text-align:center;">
+<p style="text-align:center;">
     📬 Reach me at
     <a href="mailto:jon@jonathanledford.com" style="color: var(--primary);">
      jon@jonathanledford.com
     </a>
-   </p>
-  </section>
-  <style>
+</p>
+</section>
+<style>
    footer a:hover { transform: scale(1.2); transition: transform 0.3s ease; }
   </style>
-  <footer style="text-align: center; padding: 2rem; color: var(--text-muted); font-size: 1rem; border-top: 1px solid #334155;">
-   <p style="margin-bottom: 1rem;">
+<footer style="text-align: center; padding: 2rem; color: var(--text-muted); font-size: 1rem; border-top: 1px solid #334155;">
+<p style="margin-bottom: 1rem;">
     © 2025 Jonathan Ledford
    </p>
-   <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; font-size: 1.5rem;">
-    <a href="mailto:jon@jonathanledford.com" style="color: var(--text-muted);" target="_blank" title="Email">
-     <i class="fas fa-envelope">
-     </i>
-    </a>
-    <a href="https://www.linkedin.com/in/jonledford" style="color: var(--text-muted);" target="_blank" title="LinkedIn">
-     <i class="fab fa-linkedin">
-     </i>
-    </a>
-    <a href="https://github.com/custom-arch" style="color: var(--text-muted);" target="_blank" title="GitHub">
-     <i class="fab fa-github">
-     </i>
-    </a>
-    <a href="https://docs.google.com/document/d/1w4RsSZnJ9Zto7Rrw3CbBp03ze3Cr95SdZF_WQguBk-Y/edit?usp=sharing" style="color: var(--text-muted);" target="_blank" title="Resume">
-     <i class="fas fa-file-alt">
-     </i>
-    </a>
-    <a href="https://www.twitch.tv/custom" style="color: var(--text-muted);" target="_blank" title="Twitch">
-     <i class="fab fa-twitch">
-     </i>
-    </a>
-   </div>
-  </footer>
- </body>
+<div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; font-size: 1.5rem;">
+<a href="mailto:jon@jonathanledford.com" style="color: var(--text-muted);" target="_blank" title="Email">
+<i class="fas fa-envelope">
+</i>
+</a>
+<a href="https://www.linkedin.com/in/jonledford" style="color: var(--text-muted);" target="_blank" title="LinkedIn">
+<i class="fab fa-linkedin">
+</i>
+</a>
+<a href="https://github.com/custom-arch" style="color: var(--text-muted);" target="_blank" title="GitHub">
+<i class="fab fa-github">
+</i>
+</a>
+<a href="https://docs.google.com/document/d/1w4RsSZnJ9Zto7Rrw3CbBp03ze3Cr95SdZF_WQguBk-Y/edit?usp=sharing" style="color: var(--text-muted);" target="_blank" title="Resume">
+<i class="fas fa-file-alt">
+</i>
+</a>
+<a href="https://www.twitch.tv/custom" style="color: var(--text-muted);" target="_blank" title="Twitch">
+<i class="fab fa-twitch">
+</i>
+</a>
+</div>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const scrollArrow = document.querySelector(".scroll-down i");
+  const aboutSection = document.querySelector("#about");
+  if (scrollArrow && aboutSection) {
+    scrollArrow.style.cursor = "pointer";
+    scrollArrow.addEventListener("click", () => {
+      aboutSection.scrollIntoView({ behavior: "smooth" });
+    });
+  }
+});
+</script>
+<button id="backToTop" style="display:none;" title="Back to top">↑</button>
+<script>
+const navLinks = document.querySelectorAll("nav a");
+const sections = document.querySelectorAll("section[id]");
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    const id = entry.target.getAttribute("id");
+    if (entry.isIntersecting) {
+      navLinks.forEach(link => {
+        link.classList.toggle("active", link.getAttribute("href") === `#${id}`);
+      });
+    }
+  });
+}, { threshold: 0.6 });
+sections.forEach(section => observer.observe(section));
+
+const topBtn = document.getElementById("backToTop");
+window.onscroll = () => {
+  topBtn.style.display = window.scrollY > 300 ? "block" : "none";
+};
+topBtn.onclick = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+</script></body>
 </html>
