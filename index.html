@@ -249,26 +249,72 @@ nav a.active {
   opacity: 1;
 }
 
-#about {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  text-align: left;
+/* Snapshot Section */
+#snapshot {
+  text-align: center;
+  padding: 2rem 0;
 }
-
-#about h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  position: relative;
+#snapshot ul {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  list-style: none;
+  flex-wrap: wrap;
+  padding: 0;
 }
-
-
-
-#about p {
-  max-width: 700px;
-  margin: 0 auto 1.5rem;
-  font-size: 1.05rem;
-  line-height: 1.8;
+#snapshot li {
+  font-size: 1rem;
   color: var(--text-light);
+}
+#snapshot li strong {
+  font-size: 1.4rem;
+  display: block;
+  color: white;
+}
+
+/* Modern buttons */
+.buttons a {
+  border: 2px solid transparent;
+  background: linear-gradient(90deg, var(--primary), #60a5fa);
+  transition: all 0.3s ease;
+}
+.buttons a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  border-color: white;
+}
+
+/* Responsive Typography */
+.hero h1 {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+}
+.hero p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+}
+
+/* Responsive Padding */
+@media (max-width: 600px) {
+  section {
+    padding: 2rem 1rem;
+  }
+  .hero {
+    padding: 4rem 1rem 2rem;
+  }
+}
+
+/* Sticky Resume Button */
+#stickyResume {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: var(--primary);
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  z-index: 999;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 </style>
 <!-- SEO Meta -->
@@ -290,7 +336,17 @@ nav a.active {
 <meta content="https://jonathanledford.com/preview.png" name="twitter:image"/>
 <!-- Favicon -->
 <link href="favicon.ico" rel="icon" type="image/x-icon"/>
-</head>
+<style>
+#brands img {
+  filter: grayscale(100%) brightness(0.8);
+  opacity: 0.9;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+#brands img:hover {
+  filter: none;
+  opacity: 1;
+}
+</style></head>
 <body>
 <header>
 <nav aria-label="Main Navigation" role="navigation">
@@ -344,18 +400,27 @@ nav a.active {
 <h2 class="section-title">
     About Me
    </h2>
-  <p>
+<p>
     I began my journey as a content creator, scripting, editing, and growing an audience from scratch. Working closely with real users led me into code, where I built tools to automate creative workflows and scale community growth.
   </p>
-  <p>
+<p>
     These days, I lead as a Product Manager. I’m currently pursuing a degree in Computer Science to sharpen the backend of my brain (though troubleshooting my homelab at 2 a.m. might be the real test). Whether I’m shipping a feature, leading a sprint, or designing a Twitch growth loop, my goal stays the same: build things people genuinely love.
   </p>
-  <p>
-    Outside of work, I’m a Twitch Partner, cat dad, and gamer (currently deep into Baldur’s Gate 3, romancing Shadowheart like it’s a second job). I once played a shapeshifting crab in D&D (yes, I got boiled), and I’m a self-proclaimed interior design geek with a love for industrial aesthetics and tasteful RGB. I’ve built custom PCs, switched to Arch Linux, set up a homelab, and continue my ongoing war with cable management.
+<p>
+    Outside of work, I’m a Twitch Partner, cat dad, and fitness nerd chasing a 245-pound bench press. I once played a shapeshifting crab in D&amp;D (yes, I got boiled), and I’m a self-proclaimed interior design geek with a love for industrial aesthetics and tasteful RGB. I’ve built custom PCs, switched to Arch Linux, set up a homelab, and continue my ongoing war with cable management.
   </p>
-  <p>
+<p>
     My values? Empowering others to grow, building with heart, and standing for freedom, equality, and open-source everything. If you're creating something weird, ambitious, or deeply human, there's a good chance I want in.
   </p>
+</section>
+<section data-aos="fade-up" id="snapshot">
+<h2 class="section-title">At a Glance</h2>
+<ul>
+<li><strong>15+ Product Releases</strong><br/>Led across 3 agile teams</li>
+<li><strong>25% Velocity Increase</strong><br/>Through streamlined delivery &amp; tooling</li>
+<li><strong>2,000+ Peak Viewers</strong><br/>Built &amp; scaled Twitch Partner brand</li>
+<li><strong>10+ Brand Partnerships</strong><br/>Including GamerSupps &amp; HelloFresh</li>
+</ul>
 </section>
 <section data-aos="fade-up" id="value">
 <h2 class="section-title">What I Bring to a Team</h2>
@@ -592,6 +657,18 @@ nav a.active {
 </div>
 </div>
 </section>
+<section data-aos="fade-up" id="brands" style="text-align:center; padding:2rem 0;">
+<h2 class="section-title">Trusted by brands like</h2>
+<div style="display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:2rem; margin-top:1rem;">
+<a href="https://blitz.gg" rel="noopener" target="_blank"><img alt="Blitz.gg" height="50" src="blitz.png"/></a>
+<a href="https://twitch.tv" rel="noopener" target="_blank"><img alt="Twitch Partner" height="50" href="twitch.tv/" src="twitch.png"/></a>
+<a href="https://gamersupps.gg" rel="noopener" target="_blank"><img alt="GamerSupps" height="50" src="gamersupps.png"/></a>
+<a href="https://hellofresh.com" rel="noopener" target="_blank"><img alt="HelloFresh" height="50" src="hellofresh.png"/></a>
+<a href="https://plarium.com/en/game/raid-shadow-legends/" rel="noopener" target="_blank"><img alt="RAID: Shadow Legends" height="50" src="raid.png"/></a>
+<a href="https://gamesforlove.org" rel="noopener" target="_blank"><img alt="Games for Love" height="50" src="gamesforlove.png"/></a>
+<a href="https://x.com/lazarus" rel="noopener" target="_blank"><img alt="Lazarus Esports" height="50" src="lazarus.png"/></a>
+</div>
+</section>
 <section data-aos="fade-up" id="twitch">
 <h2 class="section-title">
     Twitch Stream
@@ -619,7 +696,75 @@ nav a.active {
 </section>
 <style>
    footer a:hover { transform: scale(1.2); transition: transform 0.3s ease; }
-  </style>
+  
+/* Snapshot Section */
+#snapshot {
+  text-align: center;
+  padding: 2rem 0;
+}
+#snapshot ul {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  list-style: none;
+  flex-wrap: wrap;
+  padding: 0;
+}
+#snapshot li {
+  font-size: 1rem;
+  color: var(--text-light);
+}
+#snapshot li strong {
+  font-size: 1.4rem;
+  display: block;
+  color: white;
+}
+
+/* Modern buttons */
+.buttons a {
+  border: 2px solid transparent;
+  background: linear-gradient(90deg, var(--primary), #60a5fa);
+  transition: all 0.3s ease;
+}
+.buttons a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  border-color: white;
+}
+
+/* Responsive Typography */
+.hero h1 {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+}
+.hero p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+}
+
+/* Responsive Padding */
+@media (max-width: 600px) {
+  section {
+    padding: 2rem 1rem;
+  }
+  .hero {
+    padding: 4rem 1rem 2rem;
+  }
+}
+
+/* Sticky Resume Button */
+#stickyResume {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: var(--primary);
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  z-index: 999;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+</style>
 <footer style="text-align: center; padding: 2rem; color: var(--text-muted); font-size: 1rem; border-top: 1px solid #334155;">
 <p style="margin-bottom: 1rem;">
     © 2025 Jonathan Ledford
@@ -682,5 +827,6 @@ window.onscroll = () => {
 topBtn.onclick = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 };
-</script></body>
+</script><a href="https://docs.google.com/document/d/1w4RsSZnJ9Zto7Rrw3CbBp03ze3Cr95SdZF_WQguBk-Y/edit?usp=sharing" id="stickyResume" target="_blank">📄 Resume</a>
+</body>
 </html>
