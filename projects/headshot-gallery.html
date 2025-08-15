@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<script>
+(function(){
+  try{
+    var t = localStorage.getItem('theme') ||
+            (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    document.documentElement.setAttribute('data-theme', t);
+  }catch(e){}
+})();
+</script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blitz Product Delivery & Content Engine • Jonathan Ledford</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+/* Footer breathing room + nicer next/prev layout */
+footer{padding:32px 0 72px}
+footer .nextprev{margin-top:24px;display:flex;justify-content:space-between;gap:12px}
+footer .nextprev .btn{margin:0}
+
+/* Tweak for small screens */
+@media (max-width:640px){
+  footer{padding:28px 0 80px}
+  footer .nextprev{flex-direction:column;align-items:stretch}
+}
+footer .nextprev {
+  margin-bottom: 24px; /* space between buttons and the heading below */
+}
+</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Headshot Gallery Tool (Archived) • Jonathan Ledford</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <div class="brand">
+    <img alt="Portrait" src="../portrait_small.png" style="width:30px;height:30px;border-radius:50%;object-fit:cover;"/>
+      <div>
+        <strong>Jonathan Ledford</strong>
+        <div class="sub">Senior PM • Gaming & Social</div>
+      </div>
+    </div>
+    <div>
+      <a class="btn ghost" href="../index.html">← Back to Portfolio</a>
+    </div>
+    <button class="btn ghost" data-theme-btn aria-label="Toggle theme">🌙</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1 class="h1">Headshot Gallery Tool (Archived)</h1>
+    <p class="lead">Automated highlight capture and retrieval for esports and creators, later sunset due to API changes.</p>
+  </div>
+
+<div class="container"><div class="case-meta"><span class="badge">Senior PM</span><span class="badge">Gaming & Social</span></div></div>
+</section>
+
+<section>
+  <div class="container card pad">
+    <h2>Overview</h2>
+    <p>A tool that automatically captured and organized headshot kills for player review and esports content production.</p>
+
+    <h2>Problem</h2>
+    <p>Competitive players and content teams spent hours compiling highlight reels for social and broadcast use.</p>
+
+    <h2>Role</h2>
+    <p><strong>Role:</strong> Senior Product Manager</p>
+    <p>Scoped MVP, aligned with esports teams for pilot usage, and coordinated real-time capture with engineering.</p>
+
+    <h2>Core Skills Demonstrated</h2>
+    <div class="skills-list"><span class="badge">Overlay tools</span> <span class="badge">Real-time events</span> <span class="badge">API integration</span> <span class="badge">Esports workflows</span> <span class="badge">MVP pilots</span></div>
+
+    <h2>Solution</h2>
+    <ul>
+      <li>Lightweight client overlay detecting, flagging, and clipping headshots.</li>
+          <li>Searchable tagging system for fast retrieval by map, agent, and weapon.</li>
+          <li>One-click export to social-ready aspect ratios and codecs.</li>
+    </ul>
+
+    <h2>Impact</h2>
+    <ul>
+      <li>Adopted by 3 esports teams during testing.</li>
+          <li>Reduced highlight compilation time from hours to minutes.</li>
+          <li>Sunset due to third-party API policy changes.</li>
+    
+<div class="cta-row">
+  <a class="btn primary" href="mailto:jon@jonathanledford.com">Discuss this project</a>
+  <a class="btn ghost" href="../Jonathan_Ledford_Resume.pdf">Download resume</a>
+  <a class="btn ghost" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/jonathanledford">LinkedIn</a>
+</div>
+
+    </ul>
+
+    <h2>Visuals</h2>
+<figure style="margin:0">
+      <!-- Replace images/blitz_headshot-gallery.png with your real visual. Keep the filename or update this src. -->
+      <img loading="lazy" src="../images/blitz_headshot-gallery.png" alt="Blitz headshot gallery visual" style="width:100%;border-radius:8px;box-shadow:var(--shadow);" />
+      <figcaption class="muted" style="margin-top:8px;font-size:.9rem;">
+        Blitz headshot gallery visual
+      </figcaption>
+    </figure>
+</div>
+  </div>
+</section>
+
+<footer>
+  <div class="container" style="text-align:center;">
+    <a href="../index.html" class="btn primary">← Back to Portfolio</a>
+  </div>
+<div class="container nextprev"><a class="btn ghost" href="twitch-growth.html">← Twitch Growth System</a><a class="btn ghost" href="customs-arcade.html">Custom’s Arcade →</a></div>
+
+<div class="sticky-cta">
+  <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:10px;">
+    <div class="muted">Ready to chat about this project?</div>
+    <div>
+      <a class="btn primary" href="mailto:jon@jonathanledford.com">Let's talk</a>
+      <a class="btn ghost" href="../Jonathan_Ledford_Resume.pdf">Resume</a>
+    </div>
+  </div>
+</div>
+
+</footer>
+<script defer src="../theme.js"></script>
+</body>
+</html>

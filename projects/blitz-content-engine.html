@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<script>
+(function(){
+  try{
+    var t = localStorage.getItem('theme') ||
+            (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    document.documentElement.setAttribute('data-theme', t);
+  }catch(e){}
+})();
+</script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blitz Product Delivery & Content Engine • Jonathan Ledford</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+/* Footer breathing room + nicer next/prev layout */
+footer{padding:32px 0 72px}
+footer .nextprev{margin-top:24px;display:flex;justify-content:space-between;gap:12px}
+footer .nextprev .btn{margin:0}
+
+/* Tweak for small screens */
+@media (max-width:640px){
+  footer{padding:28px 0 80px}
+  footer .nextprev{flex-direction:column;align-items:stretch}
+}
+footer .nextprev {
+  margin-bottom: 24px; /* space between buttons and the heading below */
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <div class="brand">
+    <img alt="Portrait" src="../portrait_small.png" style="width:30px;height:30px;border-radius:50%;object-fit:cover;"/>
+      <div>
+        <strong>Jonathan Ledford</strong>
+        <div class="sub">Senior PM • Gaming & Social</div>
+      </div>
+    </div>
+    <div>
+      <a class="btn ghost" href="../index.html">← Back to Portfolio</a>
+    </div>
+    <button class="btn ghost" data-theme-btn aria-label="Toggle theme">🌙</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1 class="h1">Blitz Product Delivery & Content Engine</h1>
+    <p class="lead">Scaled content and feature delivery across 2.5M+ MAU, cutting launch cycles by 30% with integrated analytics and modular pipelines.</p>
+  </div>
+
+<div class="container"><div class="case-meta"><span class="badge">Senior PM</span><span class="badge">Gaming & Social</span></div></div>
+</section>
+
+<section>
+  <div class="container card pad">
+    <h2>Overview</h2>
+    <p>Blitz serves 2.5M+ MAU across multiple titles with guides, analytics, and updates. Feature and content delivery needed streamlining to meet growth targets.</p>
+
+    <h2>Problem</h2>
+    <p>Inconsistent launch cycles and manual coordination across squads slowed velocity and created content bottlenecks.</p>
+
+    <h2>Role</h2>
+    <p><strong>Role:</strong> Product Manager </p>
+    <p>Owned roadmap, instituted delivery frameworks, and set OKRs for content operations across LoL and Valorant verticals.</p>
+
+    <h2>Core Skills Demonstrated</h2>
+    <div class="skills-list"><span class="badge">Platform strategy</span> <span class="badge">Content pipeline</span> <span class="badge">OKRs</span> <span class="badge">A/B testing</span> <span class="badge">Analytics</span> <span class="badge">Cross-squad delivery</span></div>
+
+    <h2>Solution</h2>
+    <ul>
+      <li>Designed a modular content pipeline with automated deployment triggers.</li>
+          <li>Integrated analytics for post-launch performance and rollback safety.</li>
+          <li>Reduced cross-squad dependencies via reusable delivery modules.</li>
+    </ul>
+
+    <h2>Impact</h2>
+    <ul>
+      <li>30% faster feature launches.</li>
+          <li>95% on-time release consistency.</li>
+          <li>40% reduction in content backlog.</li>
+    
+<div class="cta-row">
+  <a class="btn primary" href="mailto:jon@jonathanledford.com">Discuss this project</a>
+  <a class="btn ghost" href="../Jonathan_Ledford_Resume.pdf">Download resume</a>
+  <a class="btn ghost" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/jonathanledford">LinkedIn</a>
+</div>
+
+    </ul>
+</div>
+  </div>
+</section>
+
+<footer>
+  <div class="container" style="text-align:center;">
+    <a href="../index.html" class="btn primary">← Back to Portfolio</a>
+  </div>
+<div class="container nextprev"><a class="btn ghost" href="lineup-features.html">← Lineup Features</a><a class="btn ghost" href="twitch-growth.html">Twitch Growth System →</a></div>
+
+<div class="sticky-cta">
+  <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:10px;">
+    <div class="muted">Ready to chat about this project?</div>
+    <div>
+      <a class="btn primary" href="mailto:jon@jonathanledford.com">Let's talk</a>
+      <a class="btn ghost" href="../Jonathan_Ledford_Resume.pdf">Resume</a>
+    </div>
+  </div>
+</div>
+
+</footer>
+<script defer src="../theme.js"></script>
+</body>
+</html>

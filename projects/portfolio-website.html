@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<script>
+(function(){
+  try{
+    var t = localStorage.getItem('theme') ||
+            (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    document.documentElement.setAttribute('data-theme', t);
+  }catch(e){}
+})();
+</script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blitz Product Delivery & Content Engine • Jonathan Ledford</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+/* Footer breathing room + nicer next/prev layout */
+footer{padding:32px 0 72px}
+footer .nextprev{margin-top:24px;display:flex;justify-content:space-between;gap:12px}
+footer .nextprev .btn{margin:0}
+
+/* Tweak for small screens */
+@media (max-width:640px){
+  footer{padding:28px 0 80px}
+  footer .nextprev{flex-direction:column;align-items:stretch}
+}
+footer .nextprev {
+  margin-bottom: 24px; /* space between buttons and the heading below */
+}
+</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio Website • Jonathan Ledford</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <div class="brand">
+    <img alt="Portrait" src="../portrait_small.png" style="width:30px;height:30px;border-radius:50%;object-fit:cover;"/>
+      <div>
+        <strong>Jonathan Ledford</strong>
+        <div class="sub">Senior PM • Gaming & Social</div>
+      </div>
+    </div>
+    <div>
+      <a class="btn ghost" href="../index.html">← Back to Portfolio</a>
+    </div>
+    <button class="btn ghost" data-theme-btn aria-label="Toggle theme">🌙</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1 class="h1">Portfolio Website</h1>
+    <p class="lead">Responsive, recruiter-optimized portfolio with theme toggle and metrics-forward content, improving interview conversion by ~40%.</p>
+  </div>
+
+<div class="container"><div class="case-meta"><span class="badge">Senior PM</span><span class="badge">Gaming & Social</span></div></div>
+</section>
+
+<section>
+  <div class="container card pad">
+    <h2>Overview</h2>
+    <p>A streamlined, recruiter-friendly portfolio to showcase product leadership, projects, and metrics across gaming and social platforms.</p>
+
+    <h2>Problem</h2>
+    <p>Needed a centralized, high-quality presentation of work that recruiters could scan in under a minute and deep dive when needed.</p>
+
+    <h2>Role</h2>
+    <p><strong>Role:</strong> Senior Product Manager</p>
+    <p>Designer and developer responsible for UX, visual design, content strategy, and implementation.</p>
+
+    <h2>Core Skills Demonstrated</h2>
+    <div class="skills-list"><span class="badge">UX writing</span> <span class="badge">Responsive design</span> <span class="badge">Recruiter flow</span> <span class="badge">Conversion optimization</span> <span class="badge">Front-end</span></div>
+
+    <h2>Solution</h2>
+    <ul>
+      <li>Responsive layout with light/dark theme toggle and sticky nav.</li>
+          <li>Projects index with case-study flow and consistent structure.</li>
+          <li>Optimized sections for recruiter scan patterns and mobile use.</li>
+    </ul>
+
+    <h2>Impact</h2>
+    <ul>
+      <li>Interview conversion improved by ~40% post-launch.</li>
+          <li>Average recruiter session time 3+ minutes.</li>
+          <li>Mobile bounce rate reduced by 35%.</li>
+    
+<div class="cta-row">
+  <a class="btn primary" href="mailto:jon@jonathanledford.com">Discuss this project</a>
+  <a class="btn ghost" href="../Jonathan_Ledford_Resume.pdf">Download resume</a>
+  <a class="btn ghost" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/jonathanledford">LinkedIn</a>
+</div>
+
+    </ul>
+
+    <h2>Visuals</h2>
+<div class="card" style="border-radius:12px; overflow:hidden;">
+      <div style="padding:16px; border-bottom:1px solid var(--line); background:var(--panel); display:flex; align-items:center; gap:10px;">
+        <div style="width:12px;height:12px;border-radius:50%;background:#ff5f56"></div>
+        <div style="width:12px;height:12px;border-radius:50%;background:#ffbd2e"></div>
+        <div style="width:12px;height:12px;border-radius:50%;background:#27c93f"></div>
+        <div style="margin-left:8px;color:var(--muted);font-size:.9rem;">portfolio/index.html</div>
+      </div>
+      <div style="padding:28px; background:var(--panel);">
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px; align-items:start;">
+          <div class="card pad" style="background:var(--panel);">
+            <div style="height:18px;width:140px;border-radius:8px;background:linear-gradient(90deg,var(--accent),var(--accent-hover));opacity:.6;margin-bottom:12px"></div>
+            <div style="height:10px;width:85%;border-radius:6px;background:var(--line);margin-bottom:8px"></div>
+            <div style="height:10px;width:70%;border-radius:6px;background:var(--line);margin-bottom:8px"></div>
+            <div style="height:10px;width:60%;border-radius:6px;background:var(--line)"></div>
+          </div>
+          <div class="card pad" style="text-align:center;background:var(--panel); position:relative;">
+            <div class="pill" style="display:inline-flex;align-items:center;gap:8px;background:var(--accent-subtle);border:1px solid var(--line);">
+              <span>YOU ARE HERE</span>
+            </div>
+            <div style="margin-top:12px;height:160px;border-radius:8px;border:1px dashed var(--line);"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+  </div>
+</section>
+
+<footer>
+  <div class="container" style="text-align:center;">
+    <a href="../index.html" class="btn primary">← Back to Portfolio</a>
+  </div>
+<div class="container nextprev"><a class="btn ghost" href="customs-arcade.html">← Custom’s Arcade</a></div>
+
+<div class="sticky-cta">
+  <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:10px;">
+    <div class="muted">Ready to chat about this project?</div>
+    <div>
+      <a class="btn primary" href="mailto:jon@jonathanledford.com">Let's talk</a>
+      <a class="btn ghost" href="../Jonathan_Ledford_Resume.pdf">Resume</a>
+    </div>
+  </div>
+</div>
+
+</footer>
+<script defer src="../theme.js"></script>
+</body>
+</html>

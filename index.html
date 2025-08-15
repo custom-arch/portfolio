@@ -1,806 +1,450 @@
 <!DOCTYPE html>
 
-<html lang="en" style="scroll-behavior: smooth;">
-<head><link as_="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="preload"/>
+<html data-theme="dark" lang="en">
+<head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Jonathan Ledford – Technical Product Manager | Scrum Master, Partner &amp; Community Leader</title>
-<!-- Google Font: Inter -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
-<!-- Font Awesome for Icons -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
-<!-- AOS Animate on Scroll Library -->
-<link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet"/>
-<script src="https://unpkg.com/aos@next/dist/aos.js">
-</script>
-<script>
-   document.addEventListener("DOMContentLoaded", () => AOS.init());
-  </script>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Jonathan Ledford • Senior PM Portfolio</title>
+<meta content="Senior Product Manager for Gaming &amp; Social Platforms. Work, case studies, writing, resume, and contact." name="description"/>
 <style>
-   :root {
-      --primary: #3b82f6;
-      --background-start: #1e1e2f;
-      --background-end: #2e2e5f;
-      --text-light: #f1f5f9;
-      --text-muted: #94a3b8;
+    /* =============================
+       BLURPLE THEME WITH TOGGLE
+       ============================= */
+    :root {
+      /* core blurple palette */
+      --blurple: #5865F2;      /* primary */
+      --blurple-700: #4752C4;  /* hover */
+      --blurple-300: #8EA1E1;  /* subtle */
+
+      /* dark tokens */
+      --bg-dark: #0b0c10;
+      --panel-dark: #11121a;
+      --line-dark: #26283a;
+      --text-dark: #eef1ff;
+      --muted-dark: #a7aecc;
+
+      /* light tokens */
+      --bg-light: #ffffff;
+      --panel-light: #ffffff;
+      --line-light: #e5e9ff;
+      --text-light: #141622;
+      --muted-light: #58607a;
+
+      --radius: 16px;
+      --shadow: 0 10px 30px rgba(0,0,0,.18);
+      --container: 1120px;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    /* theme maps */
+    [data-theme="dark"] {
+      --bg: linear-gradient(180deg, var(--bg-dark), #0e1020 55%, var(--bg-dark));
+      --panel: var(--panel-dark);
+      --line: var(--line-dark);
+      --text: var(--text-dark);
+      --muted: var(--muted-dark);
+      --accent: var(--blurple);
+      --accent-hover: var(--blurple-700);
+      --accent-subtle: rgba(88,101,242,.14);
+      --link: #fff;
+      --btn-on: #fff;
+    }
+    [data-theme="light"] {
+      --bg: linear-gradient(180deg, var(--bg-light), #f7f8ff);
+      --panel: var(--panel-light);
+      --line: var(--line-light);
+      --text: var(--text-light);
+      --muted: var(--muted-light);
+      --accent: var(--blurple);
+      --accent-hover: var(--blurple-700);
+      --accent-subtle: rgba(88,101,242,.10);
+      --link: var(--blurple);
+      --btn-on: #fff;
     }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, var(--background-start), var(--background-end));
-      color: var(--text-light);
-      line-height: 1.6;
-    }
+    /* base */
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu;background:var(--bg);color:var(--text)}
+    a{color:var(--link);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:var(--container);margin:0 auto;padding:0 24px}
 
-    header {
-      padding: 1rem 2rem;
-      background: rgba(30, 30, 47, 0.95);
-      backdrop-filter: blur(8px);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+    /* atoms */
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .pad{padding:24px}
+    .pill{display:inline-block;padding:.4rem .8rem;border:1px solid var(--line);border-radius:999px;background:var(--accent-subtle);color:var(--text);font-size:.85rem}
+    .badge{border:1px solid var(--line);background:var(--accent-subtle);border-radius:999px;padding:.25rem .6rem;font-size:.75rem;color:var(--muted)}
+    .btn{display:inline-flex;gap:.6rem;align-items:center;padding:.7rem 1rem;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--text)}
+    .btn.primary{background:var(--accent);border-color:transparent;color:var(--btn-on)}
+    .btn.primary:hover{background:var(--accent-hover)}
+    .btn.ghost:hover{background:var(--accent-subtle)}
 
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+    /* nav */
+    .nav{position:sticky;top:0;z-index:50;border-bottom:1px solid var(--line);backdrop-filter:blur(10px);background:rgba(0,0,0,.18)}
+    [data-theme="light"] .nav{background:rgba(255,255,255,.6)}
+    .nav-inner{display:flex;justify-content:space-between;align-items:center;padding:12px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:30px;height:30px;border-radius:10px;background:linear-gradient(180deg,var(--accent),var(--accent-hover))}
+    .brand strong{letter-spacing:.2px}
+    .brand .sub{color:var(--muted);font-size:.85rem}
+    .nav ul{display:flex;gap:6px;list-style:none;margin:0;padding:0}
+    .nav a{padding:.5rem .9rem;border-radius:999px;color:var(--muted)}
+    .nav a:hover,.nav a.active{background:var(--accent-subtle);color:var(--text)}
 
-    nav a {
-      color: var(--text-light);
-      text-decoration: none;
-      margin-left: 20px;
-      font-weight: 600;
-    }
+    /* hero */
+    .hero{padding:64px 0 40px}
+    .h1{font-weight:750;letter-spacing:-.02em;font-size:clamp(28px,3.4vw,44px);line-height:1.2;margin:0}
+    .lead{color:var(--muted);max-width:56ch}
+    .metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .metric{border:1px solid var(--line);border-radius:12px;padding:16px;text-align:center;background:rgba(255,255,255,.02)}
+    .metric .v{font-weight:800;font-size:1.35rem}
+    .metric .l{color:var(--muted);font-size:.8rem}
 
-    nav a:hover {
-      color: var(--primary);
-    }
+    /* brands */
+    .brand-list{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+    @media (max-width:1000px){.brand-list{grid-template-columns:repeat(3,1fr)}}
+    @media (max-width:640px){.brand-list{grid-template-columns:repeat(2,1fr)}}
+    .brand-card{padding:18px;text-align:center}
+    .brand-card:hover{transform:translateY(-2px)}
+    .brand-card .n{font-weight:600}
+    .brand-card .t{font-size:.8rem;color:var(--muted)}
 
-    section {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 4rem 2rem;
-    }
+    /* layout */
+    section{scroll-margin-top:90px;padding:56px 0}
+    .section-title{display:flex;align-items:center;gap:10px;margin:0 0 16px}
 
-    .hero {
-      text-align: center;
-      padding: 7.5rem 2rem 4rem;
-    }
+    /* work */
+    .work-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    @media (max-width:900px){.work-grid{grid-template-columns:1fr}}
+    .work-card h3{margin:0 0 4px}
+    .work-card p{color:var(--muted);margin:8px 0 0}
 
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      color: var(--text-muted);
-    }
-
-    .buttons a {
-      display: inline-block;
-      margin: 1.5rem 0.5rem 0;
-      background: var(--primary);
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: transform 0.2s ease;
-    }
-
-    .buttons a:hover {
-      transform: scale(1.05);
-    }
-
-    .profile-img {
-      width: 180px;
-      border-radius: 50%;
-      margin-top: 2rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 2rem;
-    }
-
-    .card-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      justify-content: center;
-    }
-
-    .card {
-      background: rgba(255, 255, 255, 0.05);
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
-      max-width: 400px;
-      flex: 1;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px) scale(1.02);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-    }
-
-    .card h3 {
-      margin-bottom: 0.5rem;
-    }
-
-    .card p {
-      color: var(--text-muted);
-    }
-
-    iframe {
-      border: none;
-      border-radius: 12px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      color: var(--text-muted);
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 600px) {
-      nav { flex-direction: column; align-items: flex-start; }
-      .card-container { flex-direction: column; align-items: center; }
-    }
+    /* footer */
+    footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);text-align:center}
   
-.card-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+/* === Tasteful color enhancements (inline) === */
+:root{
+  --teal: #2ec8c8;
+  --teal-700:#249c9c;
+  --pink:#ee6cff;
+  --pink-700:#c24eda;
+  --shadow-accent: 0 14px 34px rgba(88,101,242,.18);
 }
-.card {
-  max-width: 400px;
+.gradient-title{
+  background: linear-gradient(90deg, var(--blurple), var(--teal));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
+.section-title{ position: relative; padding-bottom: 6px; }
+.section-title::after{
+  content:"";
+  position:absolute; left:0; bottom:0;
+  width:72px; height:4px; border-radius:999px;
+  background: linear-gradient(90deg, var(--blurple), var(--pink));
+  opacity:.85;
+}
+.card{ position:relative; overflow:hidden; }
+.card::before{
+  content:"";
+  position:absolute; inset:0 0 auto 0; height:2px;
+  background: linear-gradient(90deg, var(--blurple), var(--teal));
+  opacity:.9;
+}
+.card:hover{ box-shadow: var(--shadow-accent); transform: translateY(-1px); }
+.pill.teal{ background: rgba(46,200,200,.12); border-color: rgba(46,200,200,.35); }
+.pill.pink{ background: rgba(238,108,255,.12); border-color: rgba(238,108,255,.35); }
+.pill.purple{ background: rgba(112,41,99,.12); border-color: rgba(112,41,99,.35); }
+a{
+  text-decoration:none;
+  background-image: linear-gradient(90deg, var(--blurple), var(--pink));
+  background-size: 0% 2px; background-repeat: no-repeat; background-position: 0 100%;
+  transition: background-size .25s ease;
+}
+a:hover{ text-decoration:none; background-size: 100% 2px; }
+.nav a.active{
+  background: linear-gradient(90deg, rgba(88,101,242,.18), rgba(238,108,255,.18));
+  color: var(--text);
+}
+.hero{ position:relative; }
+.hero::after{
+  content:"";
+  position:absolute; inset:-10% -10% auto -10%; height:60%;
+  background: radial-gradient(60% 60% at 20% 20%, rgba(88,101,242,.18), transparent 60%),
+              radial-gradient(50% 50% at 90% 10%, rgba(46,200,200,.12), transparent 60%);
+  pointer-events:none; z-index:-1;
+}
+.logo-sml{ width:24px; height:24px; border-radius:6px; vertical-align:middle; margin-right:8px; }
 
-.profile-img {
-  transition: transform 0.3s ease-in-out;
-}
-.profile-img:hover {
-  transform: scale(1.05);
-}
 
-.tag {
-  display: inline-block;
-  background-color: var(--primary);
-  color: white;
-  font-size: 0.7rem;
-  padding: 2px 8px;
-  border-radius: 20px;
-  margin-bottom: 0.5rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
+.partnered-logos img, .brand-logo {max-height:40px;width:auto;margin:0 12px;object-fit:contain;vertical-align:middle;}
 
-.project-group-header {
-  font-size: 1.4rem;
-  margin: 2.5rem 0 1rem 0;
-  color: var(--primary);
-  border-bottom: 2px solid var(--primary);
-  padding-bottom: 0.5rem;
-}
-
-.sublabel {
-  font-size: 0.75rem;
-  color: #666;
-  margin-top: -0.4rem;
-  margin-bottom: 0.6rem;
-}
-  
-.scroll-down i {
-  animation: bounce 2s infinite;
-  font-size: 1.5rem;
-  opacity: 0.7;
-}
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(8px); }
-}
-.buttons a:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 12px var(--primary);
-}
-.card:hover {
-  background-color: rgba(255, 255, 255, 0.07);
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  background: linear-gradient(135deg, var(--background-start), var(--background-end));
-  color: var(--text-light);
-  line-height: 1.6;
-}
-nav a.active {
-  color: var(--primary);
-  text-decoration: underline;
-}
-#backToTop {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: var(--primary);
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  font-size: 1.2rem;
-  cursor: pointer;
-  opacity: 0.8;
-  z-index: 1001;
-}
-#backToTop:hover {
-  opacity: 1;
-}
-
-/* Snapshot Section */
-#snapshot {
-  text-align: center;
-  padding: 2rem 0;
-}
-#snapshot ul {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  list-style: none;
-  flex-wrap: wrap;
-  padding: 0;
-}
-#snapshot li {
-  font-size: 1rem;
-  color: var(--text-light);
-}
-#snapshot li strong {
-  font-size: 1.4rem;
-  display: block;
-  color: white;
-}
-
-/* Modern buttons */
-.buttons a {
-  border: 2px solid transparent;
-  background: linear-gradient(90deg, var(--primary), #60a5fa);
-  transition: all 0.3s ease;
-}
-.buttons a:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  border-color: white;
-}
-
-/* Responsive Typography */
-.hero h1 {
-  font-size: clamp(2rem, 6vw, 3.5rem);
-}
-.hero p {
-  font-size: clamp(1rem, 2.5vw, 1.25rem);
-}
-
-/* Responsive Padding */
-@media (max-width: 600px) {
-  section {
-    padding: 2rem 1rem;
-  }
-  .hero {
-    padding: 4rem 1rem 2rem;
-  }
-}
-
-/* Sticky Resume Button */
-#stickyResume {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  background: var(--primary);
-  color: white;
-  padding: 0.75rem 1.25rem;
-  border-radius: 999px;
-  font-weight: 600;
-  text-decoration: none;
-  z-index: 999;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-#about {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  text-align: left;
-}
-
-#about h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  position: relative;
-}
-
-#about p {
-  max-width: 700px;
-  margin: 0 auto 1.5rem;
-  font-size: 1.05rem;
-  line-height: 1.8;
-  color: var(--text-light);
+@media (max-width: 600px){
+  /* Center the entire logos row and make logos slightly smaller on mobile */
+  .brand-list { justify-items: center; }
+  .brand-card { display: flex; flex-direction: column; align-items: center; text-align: center; }
+  .brand-logo { max-height: 30px; margin: 0 8px 6px; }
 }
 
 </style>
-<!-- SEO Meta -->
-<meta content="Technical Product Manager with a CS background and content creation expertise. Open to roles in product, agile, partnerships, and community management. Explore case studies, Twitch growth systems, and impactful delivery pipelines." name="description"/>
-<link href="https://jonathanledford.com/" rel="canonical"/>
-<!-- Accessibility -->
-<meta content="#0f172a" name="theme-color"/>
-<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-<!-- Open Graph (Facebook, LinkedIn) -->
-<meta content="Jonathan Ledford – Product Manager Portfolio" property="og:title"/>
-<meta content="From code to content to product strategy – discover my projects and experience." property="og:description"/>
-<meta content="https://jonathanledford.com/preview.png" property="og:image"/>
-<meta content="https://jonathanledford.com/" property="og:url"/>
-<meta content="website" property="og:type"/>
-<!-- Twitter Card -->
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="Jonathan Ledford – Product Manager Portfolio" name="twitter:title"/>
-<meta content="Certified Scrum Master, Agile-focused Product Manager, and Content Creator focused on building great things that make an impact." name="twitter:description"/>
-<meta content="https://jonathanledford.com/preview.png" name="twitter:image"/>
-<!-- Favicon -->
-<link href="favicon.ico" rel="icon" type="image/x-icon"/>
-<style>
-#brands img {
-  filter: grayscale(100%) brightness(0.8);
-  opacity: 0.9;
-  transition: filter 0.3s ease, opacity 0.3s ease;
-}
-#brands img:hover {
-  filter: none;
-  opacity: 1;
-}
-</style></head>
+</head>
 <body>
-<header>
-<nav aria-label="Main Navigation" role="navigation">
+<header class="nav">
+<div class="container nav-inner">
+<div class="brand">
+<img alt="Portrait" src="portrait_small.png" style="width:30px;height:30px;border-radius:50%;object-fit:cover;"/>
 <div>
-<strong>
-      Jonathan Ledford
-     </strong>
+<strong>Jonathan Ledford</strong>
+<div class="sub">Senior PM • Gaming &amp; Social</div>
 </div>
-<div>
-<a aria-label="Scroll to About" href="#about">
-      About
-     </a>
-<a aria-label="Scroll to Projects" href="#projects">
-      Projects
-     </a>
-<a aria-label="Scroll to Twitch" href="#twitch">
-      Twitch
-     </a>
-<a aria-label="Scroll to Contact" href="#contact">
-      Contact
-     </a>
 </div>
-</nav>
-</header>
-<section class="hero" data-aos="fade-up">
-<h1>
-    Jonathan Ledford
-   </h1>
-<p>
-    Certified Scrum Master, Agile-focused Product Manager, and Content Creator focused on building great things that make an impact.
-   </p>
-<a href="https://www.linkedin.com/in/jonledford/" rel="noopener noreferrer" target="_blank">
-<img alt="Jonathan Ledford" class="profile-img" data-aos="zoom-in" src="profile_web_circular_adjusted.png"/>
-</a>
-<div class="buttons">
-<a download="Jonathan_Ledford_Resume.pdf" href="Jonathan_Ledford_Resume.pdf">📄 Download Resume</a>
-<a href="mailto:jon@jonathanledford.com">
-     ✉️ Contact Me
-    </a>
-</div>
-<div class="scroll-down" style="text-align: center; margin-top: 1rem;">
-<i class="fas fa-chevron-down" style="animation: bounce 2s infinite; font-size: 1.5rem; opacity: 0.7;"></i>
-</div>
-</section>
-<section data-aos="fade-up" id="about">
-<h2 class="section-title">About Me</h2>
-<p>
-      My path into product started in the world of content creation. I wrote scripts, edited videos, and built an audience from scratch. When I hit bottlenecks, I created tools to solve them. That instinct to fix real problems for real users led me into coding, community leadership, and eventually, product management.
-    </p>
-<p>
-      Today, I lead cross-functional teams, ship iterative features, and automate anything that slows us down (sometimes it's just Twitch alerts). I'm pursuing a degree in Computer Science, although I might be learning more from troubleshooting my homelab at 2 a.m. than from any textbook.
-    </p>
-<p>
-      Outside of work, I’m a Twitch Partner, cat dad, and gamer. Currently deep into Baldur’s Gate 3, romancing Shadowheart like it’s a second job. I once played a shape-shifting crab in D&D (yes, I got boiled), I'm a wood and metal aesthetic enthusiast.  I’ve built custom PCs, switched to Arch Linux, set up a homelab, and continue my ongoing war with cable management. Whether it’s gaming, streaming, or system tinkering, my hobbies mirror how I work: focused, curious, and forever learning.
-    </p>
-<p>
-      I believe in building with empathy, empowering others to grow, and advocating for open-source, freedom, and inclusive collaboration. If you're working on something bold, impactful, or delightfully weird, I’d love to be part of it.
-    </p>
-</section>
-<section data-aos="fade-up" id="snapshot">
-<h2 class="section-title">At a Glance</h2>
+<div style="display:flex;align-items:center;gap:8px">
+<nav id="topnav">
 <ul>
-<li><strong>15+ Product Releases</strong><br/>Led across 3 agile teams</li>
-<li><strong>25% Velocity Increase</strong><br/>Through streamlined delivery &amp; tooling</li>
-<li><strong>2,000+ Peak Viewers</strong><br/>Built &amp; scaled Twitch Partner brand</li>
-<li><strong>10+ Brand Partnerships</strong><br/>Including GamerSupps &amp; HelloFresh</li>
+<li><a class="active" href="#home">Home</a></li>
+<li><a href="#work">Work</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#writing">Projects</a></li>
+<li><a href="#resume">Resume</a></li>
+<li><a href="#contact">Contact</a></li>
 </ul>
+</nav>
+<button aria-label="Toggle theme" class="btn ghost" data-theme-btn="" id="themeBtn">🌙</button>
+</div>
+</div>
+</header>
+<!-- HERO -->
+<section class="hero" id="home">
+<div class="container" style="display:grid;grid-template-columns:1.2fr .8fr;gap:24px">
+<div>
+<h1 class="h1 gradient-title">Senior Product Manager for Gaming &amp; Social Platforms</h1>
+<p style="font-size:1.05rem;color:var(--muted);margin-top:8px;">From content creator to Senior PM, I ship player-focused, data-driven features that solve real problems for real users.</p>
+<p class="lead">I ship growth-ready features, build experimentation muscles, and scale communities. Former Producer at Blitz (2.5M+ MAU). Partnered creator on Twitch. Comfortable leading squads or stewarding partnerships and community programs.</p>
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
+<a class="btn primary" href="#work">See the work ➜</a>
+<a class="btn ghost" href="#resume">Resume</a>
+</div>
+</div>
+<div style="text-align:center;margin-bottom:20px;"><img alt="Jonathan Ledford" src="portrait_large.png" style="width:100%;max-width:300px;border-radius:50%;box-shadow:var(--shadow);"/></div>
+<div class="card pad">
+<div class="metrics">
+<div class="metric"><div class="v">2.5M+</div><div class="l">MAU served (Blitz)</div></div>
+<div class="metric"><div class="v">40%</div><div class="l">Session engagement lift</div></div>
+<div class="metric"><div class="v">25%</div><div class="l">Sprint velocity increase</div></div>
+<div class="metric"><div class="v">15%</div><div class="l">Avg view duration</div></div>
+</div>
+<div style="margin-top:10px;color:var(--muted);font-size:.85rem">Select data obfuscated for confidentiality.</div>
+</div>
+</div>
+<div class="container" style="display:grid;grid-template-columns:2fr 1fr;gap:1px">
+<div style="margin:14px 0 6px;display:flex;flex-wrap:wrap;gap:8px">
+<span class="pill">Product Manager</span>
+<span class="pill teal">Scrum Master</span>
+<span class="pill pink">Partnerships Manager</span>
+<span class="pill purple">Community Manager</span>
+</div>
+</div></section>
+<!-- BRANDS -->
+<section id="brands">
+<div class="container">
+<h2 class="section-title">Trusted by &amp; partnered with</h2>
+<div class="brand-list">
+<a class="card pad brand-card" href="https://www.twitch.tv/" rel="noreferrer" target="_blank">
+<img alt="Twitch" class="brand-logo" src="logos/twitch.png"/>
+<div class="n">Twitch (Partner)</div>
+<div class="t">Creator</div>
+</a>
+<a class="card pad brand-card" href="https://blitz.gg/" rel="noreferrer" target="_blank">
+<img alt="Blitz.gg" class="brand-logo" src="logos/blitz.png"/>
+<div class="n">Blitz.gg</div>
+<div class="t">Product</div>
+</a>
+<a class="card pad brand-card" href="https://www.linkedin.com/company/lazarusesports/" rel="noreferrer" target="_blank">
+<img alt="Lazarus Esports" class="brand-logo" src="logos/lazarus.png"/>
+<div class="n">Lazarus Esports</div>
+<div class="t">Esports</div>
+</a>
+<a class="card pad brand-card" href="https://gamersupps.gg/" rel="noreferrer" target="_blank">
+<img alt="GamerSupps" class="brand-logo" src="logos/gamersupps.png"/>
+<div class="n">GamerSupps</div>
+<div class="t">Partner</div>
+</a>
+<a class="card pad brand-card" href="https://www.hellofresh.com/" rel="noreferrer" target="_blank">
+<img alt="HelloFresh" class="brand-logo" src="logos/hellofresh.png"/>
+<div class="n">HelloFresh</div>
+<div class="t">Partner</div>
+</a>
+</div>
+</div>
 </section>
-<section data-aos="fade-up" id="value">
-<h2 class="section-title">What I Bring to a Team</h2>
-<ul style="max-width: 800px; margin: 0 auto; padding: 0 1rem; list-style: none;">
-<li>🧠 Systems Thinking: I connect the dots between UX, data, and product goals.</li>
-<li>📈 Outcome-Driven: I ship value, not just features. 25%+ velocity boosts, improved retention, reduced churn.</li>
-<li>🎨 Creative Execution: From Twitch growth loops to in-app UX, I know how to build for humans.</li>
-<li>⚙️ Cross-Functional Glue: I collaborate across engineering, design, and marketing to deliver unified outcomes.</li>
+<!-- WORK -->
+<section id="work">
+<div class="container">
+<h2 class="section-title">Work</h2>
+<div class="work-grid">
+<article class="card pad work-card">
+<h3><img alt="" class="logo-sml" src="logos/blitz.png"/>Blitz.gg – Growth &amp; Content Production</h3>
+<p>Shipped 15+ player-facing features across LoL &amp; Valorant for 2.5M+ MAU, driving a 40% session engagement lift and instituting OKRs &amp; A/B infra.</p>
+<ul>
+<li>Led strategy for performance analytics, match analysis, and educational content.</li>
+<li>Introduced OKRs and experimentation frameworks accelerating delivery by 30%.</li>
+<li>Integrated real-time game data APIs to increase DAU and feature stickiness.</li>
 </ul>
+</article>
+<article class="card pad work-card">
+<h3><img alt="" class="logo-sml" src="logos/twitch.png"/>Partnered Creator – Growth &amp; Partnerships</h3>
+<p>Built a gaming content brand with 2,000+ peak CCV. Ran 25+ experiments to improve retention and conversion; negotiated and managed brand partnerships.</p>
+<ul>
+<li>Designed multi-platform content workflows using custom analytics dashboards.</li>
+<li>Ran A/B tests on stream format, schedule, and engagement mechanics.</li>
+</ul>
+</article>
+</div>
+</div>
 </section>
-<section data-aos="fade-up" id="projects">
-<p style="text-align:center; max-width: 700px; margin: 0 auto; color: var(--text-muted);">Explore key product, UX, and platform projects I’ve led from gameplay tools to creator-focused systems.</p><h2 class="section-title">
-    Projects
-   </h2>
-<div class="card-container">
-<div class="card" data-aos="fade-up" data-aos-delay="0">
+<!-- ABOUT -->
+<section id="about">
+<div class="container">
+<h2 class="section-title">About</h2>
+<div class="card pad" style="display:flex;flex-direction:column;gap:16px;">
+<p><strong>From Content Creator to Senior Product Manager</strong><br/>
+        My path into product started in the world of content creation. I wrote scripts, edited videos, and built an audience from scratch. When I hit bottlenecks, I created tools to solve them. That instinct to fix real problems for real users led me into coding, community leadership, and eventually, product management.</p>
+<p><strong>What I Do Today</strong><br/>
+        I lead cross-functional teams, ship iterative features, and automate anything that slows us down (sometimes it's just Twitch alerts). I'm also pursuing a B.S. in Communications followed by a B.S. in Computer Science, although I might be learning more from troubleshooting my homelab at 2 a.m. than from any textbook.</p>
+<p><strong>Beyond the Job</strong><br/>
+        I’m a Twitch Partner, cat dad, and gamer. Currently deep into <em>Baldur’s Gate 3</em>, romancing Shadowheart like it’s a second job. I once played a shape-shifting crab in D&amp;D (yes, I got boiled). Outside the screen, I’m a wood-and-metal aesthetic enthusiast, a custom PC builder, Arch Linux power user, and an ongoing combatant in the war on cable management. Whether it’s gaming, streaming, or system tinkering, my hobbies mirror how I work: focused, curious, and forever learning.</p>
+<p><strong>My Values</strong><br/>
+        I believe in building with empathy, empowering others to grow, and advocating for open-source, freedom, and inclusive collaboration. If you're working on something bold, impactful, or delightfully weird, I’d love to be part of it.</p>
+</div>
+</div>
+</section>
+<!-- WRITING -->
+<!-- PROJECTS -->
+<section id="writing">
+<div class="container">
+<h2 class="section-title">Projects</h2>
+<div class="work-grid">
+<a class="card pad work-card" href="projects/lineup-features.html">
 <h3>Lineup Features (Valorant &amp; CS)</h3>
-<p class="sublabel">
-      Blitz
-     </p>
-<div class="tags">
-<span class="tag">
-       Product
-      </span>
-<span class="tag">
-       UX
-      </span>
-<span class="tag">
-       Content
-      </span>
-</div>
-<p>
-      Created and scaled lineup features for Valorant and Counter-Strike at Blitz.gg. Built a content system delivering 1,000+ curated videos, including utility tutorials tailored to each game's meta. Collaborated on branded overlays, UX playback systems, and in-app content discovery. Supported user skill growth through visual-first learning experiences.
-     </p>
-<a class="project-link" href="case-blitz.html" style="color: var(--primary); text-decoration: underline;">
-      View Case Study
-     </a>
-</div>
-<div class="card" data-aos="fade-right" data-aos-delay="100">
-<h3>Blitz Product Delivery &amp; Content Engine</h3>
-<p class="sublabel">
-      Blitz
-     </p>
-<div class="tags">
-<span class="tag">
-       Product
-      </span>
-<span class="tag">
-       UX
-      </span>
-<span class="tag">
-       Agile
-      </span>
-<span class="tag">
-       Scrum
-      </span>
-</div>
-<p>
-      Directed full feature lifecycle across three agile teams, delivering 15+ product releases and boosting throughput by 25%. Built scalable systems for content creation, including branded overlays, review pipelines, and animations that cut production time by 30%. Improved triage, roadmaps, and team velocity while maintaining alignment with UX, engineering, and marketing stakeholders.
-     </p>
-<a class="project-link" href="case-blitz-product-delivery.html" style="color: var(--primary); text-decoration: underline;">
-      View Case Study
-     </a>
-</div>
-<div class="card" data-aos="fade-left" data-aos-delay="200">
-<h3>Stat &amp; Loadout Tools (Valorant)</h3>
-<p class="sublabel">
-      Blitz
-     </p>
-<div class="tags">
-<span class="tag">
-       Product
-      </span>
-<span class="tag">
-       UX
-      </span>
-<span class="tag">
-       Data
-      </span>
-</div>
-<p>
-      Built data-driven tools for Valorant players to optimize performance and loadouts. Delivered match stats, improvement metrics, and benchmarks for skill tracking, while also designing a browsable interface for weapon and utility data like damage values and ability costs. Improved user retention through performance feedback and strategic decision support.
-     </p>
-<a class="project-link" href="https://www.blitz.gg/valorant/stats" style="color: var(--primary); text-decoration: underline;">
-      View Project
-     </a>
-</div>
-<div class="card" data-aos="zoom-in" data-aos-delay="300">
-<h3>Headshot Gallery Tool (Archived)</h3>
-<p class="sublabel">
-      Blitz
-     </p>
-<div class="tags">
-<span class="tag">
-       Product
-      </span>
-<span class="tag">
-       UX
-      </span>
-<span class="tag">
-       Content
-      </span>
-</div>
-<p>
-      Developed a precision training feature for Valorant that allowed users to visualize crosshair placement across key angles and maps. The tool boosted engagement and retention by delivering clear visual cues for head-level aim training.
-     </p>
-<a class="project-link" href="case-blitz-headshot-gallery.html" style="color: var(--primary); text-decoration: underline;">
-      View Case Study
-     </a>
-</div>
-<div class="card" data-aos="flip-up" data-aos-delay="400">
-<h3>Twitch Growth &amp; Content System</h3>
-<p class="sublabel">
-      Twitch
-     </p>
-<div class="tags">
-<span class="tag">
-       Community
-      </span>
-<span class="tag">
-       Brand
-      </span>
-<span class="tag">
-       Content
-      </span>
-</div>
-<p>
-      Built and scaled a Twitch channel to Partner status, reaching 2,000 peak viewers and 55,000 monthly chat messages. Created growth loops across Twitch, TikTok, and YouTube using DaVinci Resolve for editing and strategic repurposing. Secured sponsorships from GamerSupps, HelloFresh, and others while maintaining a consistent publishing and streaming cadence.
-     </p>
-<a class="project-link" href="case-twitch.html" style="color: var(--primary); text-decoration: underline;">
-      View Case Study
-     </a>
-</div>
-<div class="card" data-aos="fade-up" data-aos-delay="0">
-<h3>Custom’s Arcade Platform &amp; Bot Automation</h3>
-<p class="sublabel">
-      Personal Project
-     </p>
-<div class="tags">
-<span class="tag">
-       Infrastructure
-      </span>
-<span class="tag">
-       Community
-      </span>
-<span class="tag">
-       Product
-      </span>
-</div>
-<p>
-      Built and maintained a self-hosted gaming platform featuring Project Zomboid, Rust, and Minecraft servers. Developed a custom Discord bot for seasonal resets, player progression, rank syncing, and community management. Delivered a seamless user experience across gameplay and social layers through technical infrastructure and automation.
-     </p>
-<a class="project-link" href="https://www.customsarcade.com" style="color: var(--primary); text-decoration: underline;">
-      View Project
-     </a>
-</div>
-<div class="card" data-aos="fade-right" data-aos-delay="100">
-<h3>Portfolio Website</h3>
-<p class="sublabel">
-      Personal Project
-     </p>
-<div class="tags">
-<span class="tag">
-       Infrastructure
-      </span>
-<span class="tag">
-       Brand
-      </span>
-<span class="tag">
-       UX
-      </span>
-</div>
-<p>
-      Designed and deployed a custom-built personal portfolio to showcase product case studies, growth metrics, and content strategy. Built with semantic HTML, custom CSS, and hosted via GitHub Pages with a custom domain and DNS integration.
-     </p>
-<a class="project-link" href="#" style="color: var(--primary); text-decoration: underline;">
-      View Project
-     </a>
-</div>
-</div>
-</section>
-
-<section data-aos="fade-up" id="brands" style="text-align:center; padding:2rem 0;">
-<p style="text-align:center; max-width: 700px; margin: 0 auto; color: var(--text-muted);">I’ve collaborated with brands through sponsorships, partnerships, or professional work.</p>
-<h2 class="section-title">Partnered With or Featured By</h2>
-<div style="display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:2rem; margin-top:1rem;">
-<a href="https://blitz.gg" rel="noopener" target="_blank"><img alt="Blitz.gg" height="50" src="blitz.png"/></a>
-<a href="https://twitch.tv" rel="noopener" target="_blank"><img alt="Twitch Partner" height="50" href="twitch.tv/" src="twitch.png"/></a>
-<a href="https://gamersupps.gg" rel="noopener" target="_blank"><img alt="GamerSupps" height="50" src="gamersupps.png"/></a>
-<a href="https://hellofresh.com" rel="noopener" target="_blank"><img alt="HelloFresh" height="50" src="hellofresh.png"/></a>
-<a href="https://plarium.com/en/game/raid-shadow-legends/" rel="noopener" target="_blank"><img alt="RAID: Shadow Legends" height="50" src="raid.png"/></a>
-<a href="https://gamesforlove.org" rel="noopener" target="_blank"><img alt="Games for Love" height="50" src="gamesforlove.png"/></a>
-<a href="https://x.com/lazarus" rel="noopener" target="_blank"><img alt="Lazarus Esports" height="50" src="lazarus.png"/></a>
-</div>
-</section>
-<section data-aos="fade-up" id="twitch">
-<h2 class="section-title">
-    Twitch Stream
-   </h2>
-<p style="text-align:center; color: var(--text-muted);">
-    Check out my latest content and live streams.
-   </p>
-<div style="text-align: center; margin-top: 1rem;">
-<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
-<iframe allowfullscreen="true" height="300" src="https://player.twitch.tv/?channel=custom&amp;parent=jonathanledford.com" style="position:absolute;top:0;left:0;width:100%;height:100%;" width="480">
-</iframe>
-</div>
-</div>
-</section>
-<section data-aos="fade-up" id="testimonials">
-<h2 class="section-title">What Others Say</h2>
-<div class="card-container">
-<div class="card">
-<p>"Jonathan has a rare ability to bridge technical depth with storytelling clarity. He brought structure and creativity to every sprint."</p>
-<p style="color: var(--text-muted); font-size: 0.9rem;">— Former Engineering Lead, Blitz.gg</p>
-</div>
-<div class="card">
-<p>"Jon is a true professional and an absolute pleasure to collaborate with. He brings creativity, consistency, and clear communication to every project. Throughout our partnership, he has gone above and beyond, seamlessly balancing content, brand alignment, and community engagement. He's one of those rare creators who understands both the business and the audience."</p>
-<p style="color: var(--text-muted); font-size: 0.9rem;">— Todd, GamerSupps Partner Manager</p>
-</div>
-</div>
-</section>
-<section data-aos="fade-up" id="contact">
-<h2 class="section-title">
-    Contact Me
-   </h2>
-<p style="text-align:center;">
-    📬 Reach me at
-    <a href="mailto:jon@jonathanledford.com" style="color: var(--primary);">
-     jon@jonathanledford.com
-    </a>
+<p class="muted">Integrated in-client lineup discovery; +18% returning sessions.
+        <div class="project-card-footer"><span class="badge">+18% returning sessions</span><span class="muted">•</span><span class="muted">View case study →</span></div>
 </p>
-</section>
-<style>
-   footer a:hover { transform: scale(1.2); transition: transform 0.3s ease; }
-  
-/* Snapshot Section */
-#snapshot {
-  text-align: center;
-  padding: 2rem 0;
-}
-#snapshot ul {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  list-style: none;
-  flex-wrap: wrap;
-  padding: 0;
-}
-#snapshot li {
-  font-size: 1rem;
-  color: var(--text-light);
-}
-#snapshot li strong {
-  font-size: 1.4rem;
-  display: block;
-  color: white;
-}
-
-/* Modern buttons */
-.buttons a {
-  border: 2px solid transparent;
-  background: linear-gradient(90deg, var(--primary), #60a5fa);
-  transition: all 0.3s ease;
-}
-.buttons a:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  border-color: white;
-}
-
-/* Responsive Typography */
-.hero h1 {
-  font-size: clamp(2rem, 6vw, 3.5rem);
-}
-.hero p {
-  font-size: clamp(1rem, 2.5vw, 1.25rem);
-}
-
-/* Responsive Padding */
-@media (max-width: 600px) {
-  section {
-    padding: 2rem 1rem;
-  }
-  .hero {
-    padding: 4rem 1rem 2rem;
-  }
-}
-
-/* Sticky Resume Button */
-#stickyResume {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  background: var(--primary);
-  color: white;
-  padding: 0.75rem 1.25rem;
-  border-radius: 999px;
-  font-weight: 600;
-  text-decoration: none;
-  z-index: 999;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-</style>
-<footer style="text-align: center; padding: 2rem; color: var(--text-muted); font-size: 1rem; border-top: 1px solid #334155;">
-<p style="margin-bottom: 1rem;">
-    © 2025 Jonathan Ledford
-   </p>
-<div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; font-size: 1.5rem;">
-<a href="mailto:jon@jonathanledford.com" style="color: var(--text-muted);" target="_blank" title="Email">
-<i class="fas fa-envelope">
-</i>
 </a>
-<a href="https://www.linkedin.com/in/jonledford" style="color: var(--text-muted);" target="_blank" title="LinkedIn">
-<i class="fab fa-linkedin">
-</i>
+<a class="card pad work-card" href="projects/blitz-content-engine.html">
+<h3>Blitz Product Delivery &amp; Content Engine</h3>
+<p class="muted">Scaled content pipeline to 2.5M+ MAU; 30% faster launches.
+        <div class="project-card-footer"><span class="badge">2.5M+ MAU • 30% faster</span><span class="muted">•</span><span class="muted">View case study →</span></div>
+</p>
 </a>
-<a href="https://github.com/custom-arch" style="color: var(--text-muted);" target="_blank" title="GitHub">
-<i class="fab fa-github">
-</i>
+<a class="card pad work-card" href="projects/twitch-growth.html">
+<h3>Twitch Growth &amp; Content System</h3>
+<p class="muted">Cross-platform content engine; +15% avg view duration.
+        <div class="project-card-footer"><span class="badge">+15% view duration</span><span class="muted">•</span><span class="muted">View case study →</span></div>
+</p>
 </a>
-<a href="Jonathan_Ledford_Resume.pdf" style="color: var(--text-muted);" target="_blank" title="Resume">
-<i class="fas fa-file-alt">
-</i>
+<a class="card pad work-card" href="projects/headshot-gallery.html">
+<h3>Headshot Gallery Tool (Archived)</h3>
+<p class="muted">Automated highlight capture; pilot with esports teams.
+        <div class="project-card-footer"><span class="badge">Pilot with esports teams</span><span class="muted">•</span><span class="muted">View case study →</span></div>
+</p>
 </a>
-<a href="https://www.twitch.tv/custom" style="color: var(--text-muted);" target="_blank" title="Twitch">
-<i class="fab fa-twitch">
-</i>
+<a class="card pad work-card" href="projects/customs-arcade.html">
+<h3>Custom’s Arcade Platform &amp; Bot Automation</h3>
+<p class="muted">Seasonal leaderboards + bots; 82% retention.
+        <div class="project-card-footer"><span class="badge">82% season retention</span><span class="muted">•</span><span class="muted">View case study →</span></div>
+</p>
+</a>
+<a class="card pad work-card" href="projects/portfolio-website.html">
+<h3>Portfolio Website</h3>
+<p class="muted">Recruiter-optimized portfolio; ~40% lift in interviews.
+        <div class="project-card-footer"><span class="badge">~40% interview lift</span><span class="muted">•</span><span class="muted">View case study →</span></div>
+</p>
 </a>
 </div>
-</footer>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const scrollArrow = document.querySelector(".scroll-down i");
-  const aboutSection = document.querySelector("#about");
-  if (scrollArrow && aboutSection) {
-    scrollArrow.style.cursor = "pointer";
-    scrollArrow.addEventListener("click", () => {
-      aboutSection.scrollIntoView({ behavior: "smooth" });
-    });
-  }
-});
-</script>
-<button id="backToTop" style="display:none;" title="Back to top">↑</button>
-<script>
-const navLinks = document.querySelectorAll("nav a");
-const sections = document.querySelectorAll("section[id]");
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    const id = entry.target.getAttribute("id");
-    if (entry.isIntersecting) {
-      navLinks.forEach(link => {
-        link.classList.toggle("active", link.getAttribute("href") === `#${id}`);
-      });
-    }
-  });
-}, { threshold: 0.6 });
-sections.forEach(section => observer.observe(section));
+</div>
+</section>
+<!-- RESUME (with Experience column) -->
+<section id="resume">
+<div class="container">
+<h2 class="section-title">Resume</h2>
+<div class="card pad" style="display:grid;grid-template-columns:1fr 1.2fr;gap:24px;align-items:start">
+<!-- Left: contact + download -->
+<div>
+<div class="muted">Phone: (859) 404-0397</div>
+<div class="muted">Email: <a href="mailto:jon@jonathanledford.com">jon@jonathanledford.com</a></div>
+<div class="muted">Location: Mount Sterling, KY (Open to relocation)</div>
+<div class="muted">Website: <a href="https://www.jonathanledford.com" rel="noreferrer" target="_blank">jonathanledford.com</a></div>
+<div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
+<a class="btn primary" download="" href="Jonathan_Ledford_Resume.pdf">Download PDF</a>
+</div>
+</div>
+<!-- Right: Experience -->
+<div><div>
+<div class="muted" style="text-transform:uppercase;font-weight:700;font-size:.8rem;margin:14px 0 8px">Experience</div>
+<div style="margin-bottom:14px">
+<strong>Partnered Creator · Twitch</strong>
+<span class="muted" style="float:right">Jan 2023 – Present</span>
+<ul style="margin-top:4px">
+<li>Led 3‑person content team across YouTube, TikTok, and Reels; grew CCV 2000% with QA workflows.</li>
+<li>Orchestrated collaborations and repurposed live content into promos that boosted conversions by 45%.</li>
+<li>Managed brand partnerships; optimized ads and tracking to lift affiliate conversions 15%.</li>
+<li>Automated content scheduling and cross‑platform posting, cutting prep time by 25%.</li>
+<li>Developed community events, giveaways, and themed campaigns that increased engagement by 20%.</li>
+</ul>
+</div>
+<div style="margin-bottom:14px;clear:both">
+<strong>Content Producer · Blitz App</strong>
+<span class="muted" style="float:right">Jun 2020 – Jan 2023</span>
+<ul style="margin-top:4px">
+<li>Directed product strategy for analytics and education tools serving 2.5M+ monthly users.</li>
+<li>Shipped 1,000+ videos from brief to publish with a 5‑stage pipeline, Jira tracking, and QA gates.</li>
+<li>Built Lineups feature; boosted retention 20% via concise VO, faster edits, and short videos.</li>
+<li>Led Scrum ceremonies; improved sprint velocity 30% and cut release cycles by 20%.</li>
+<li>Coordinated launches with influencer campaigns, increasing DAUs 35%.</li>
+</ul>
+</div>
+<div style="clear:both">
+<strong>Esports Player · Lazarus Esports</strong>
+<span class="muted" style="float:right">Mar 2020 – Jun 2020</span>
+<ul style="margin-top:4px">
+<li>Competed in top‑tier Valorant with three Top‑10 finishes, growing brand reach by 12%.</li>
+<li>Delivered gameplay analytics and strategy to enhance tactics and event performance.</li>
+</ul>
+</div>
+<div class="muted" style="text-transform:uppercase;font-weight:700;font-size:.8rem;margin:16px 0 8px">Education &amp; Certificates</div>
+<div style="margin-bottom:10px">
+<strong>B.S. in Communications</strong> Western Governors University <span class="muted">(Expected Aug 2026)</span><br/>
+<span class="muted">Certificates: Certified ScrumMaster (Scrum Alliance); Project Management: Professional (Google)</span>
+</div>
+<div class="muted" style="text-transform:uppercase;font-weight:700;font-size:.8rem;margin:16px 0 8px">Technical Skills</div>
+<ul style="margin-top:4px;columns:2;gap:20px">
+<li><strong>Product Leadership:</strong> Roadmaps, Agile/Scrum, OKRs/KPIs, Risk &amp; Change Management</li>
+<li><strong>Growth &amp; Engagement:</strong> LiveOps, Retention, Community Engagement, Monetization Strategy</li>
+<li><strong>Data &amp; Experimentation:</strong> A/B Testing, Feature Flags, Analytics Integration, SQL</li>
+<li><strong>Tools &amp; Platforms:</strong> Jira, Confluence, Trello, Asana, Google Analytics, Gaming APIs, Discord, Twitch, TikTok, YouTube</li>
+</ul>
+</div></div>
+</div>
+</div>
+</section>
+<!-- CONTACT -->
+<section id="contact">
+<div class="container">
+<h2 class="section-title">Contact</h2>
+<div class="card pad" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center">
+<div>
+<div>Email: <a href="mailto:jon@jonathanledford.com">jon@jonathanledford.com</a></div>
+<div>LinkedIn: <a href="https://www.linkedin.com/in/jonledford" rel="noreferrer" target="_blank">linkedin.com/in/jonledford</a></div>
+</div>
+<div>
+<a class="btn primary" href="mailto:jon@jonathanledford.com">Email me</a>
+</div>
+</div>
+</div>
+</section>
+<footer>
+    © <span id="year"></span> Jonathan Ledford. Some data obfuscated for confidentiality.
+  </footer>
 
-const topBtn = document.getElementById("backToTop");
-window.onscroll = () => {
-  topBtn.style.display = window.scrollY > 300 ? "block" : "none";
-};
-topBtn.onclick = () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-};
-</script><a href="Jonathan_Ledford_Resume.pdf" id="stickyResume" target="_blank">📄 Resume</a>
-</body>
+<script defer="True" src="./theme.js"></script></body>
 </html>

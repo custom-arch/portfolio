@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<script>
+(function(){
+  try{
+    var t = localStorage.getItem('theme') ||
+            (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    document.documentElement.setAttribute('data-theme', t);
+  }catch(e){}
+})();
+</script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blitz Product Delivery & Content Engine • Jonathan Ledford</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+/* Footer breathing room + nicer next/prev layout */
+footer{padding:32px 0 72px}
+footer .nextprev{margin-top:24px;display:flex;justify-content:space-between;gap:12px}
+footer .nextprev .btn{margin:0}
+
+/* Tweak for small screens */
+@media (max-width:640px){
+  footer{padding:28px 0 80px}
+  footer .nextprev{flex-direction:column;align-items:stretch}
+}
+footer .nextprev {
+  margin-bottom: 24px; /* space between buttons and the heading below */
+}
+</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Twitch Growth & Content System • Jonathan Ledford</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <div class="brand">
+    <img alt="Portrait" src="../portrait_small.png" style="width:30px;height:30px;border-radius:50%;object-fit:cover;"/>
+      <div>
+        <strong>Jonathan Ledford</strong>
+        <div class="sub">Senior PM • Gaming & Social</div>
+      </div>
+    </div>
+    <div>
+      <a class="btn ghost" href="../index.html">← Back to Portfolio</a>
+    </div>
+    <button class="btn ghost" data-theme-btn aria-label="Toggle theme">🌙</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1 class="h1">Twitch Growth & Content System</h1>
+    <p class="lead">Built a multi-platform content engine and analytics loop, raising average view duration by 15% and cutting planning time by 20%.</p>
+  </div>
+
+<div class="container"><div class="case-meta"><span class="badge">Senior PM</span><span class="badge">Gaming & Social</span></div></div>
+</section>
+
+<section>
+  <div class="container card pad">
+    <h2>Overview</h2>
+    <p>As a partnered creator, scaling content required automation, consistent experimentation, and unified analytics across platforms.</p>
+
+    <h2>Problem</h2>
+    <p>Manual planning and fragmented data slowed iteration and reduced the cadence of growth experiments.</p>
+
+    <h2>Role</h2>
+    <p><strong>Role:</strong> Senior Product Manager</p>
+    <p>Designed the growth system, implemented analytics integrations, and led cross-platform strategy and experiments.</p>
+
+    <h2>Core Skills Demonstrated</h2>
+    <div class="skills-list"><span class="badge">Creator economy</span> <span class="badge">Content systems</span> <span class="badge">Automation</span> <span class="badge">Retention analytics</span> <span class="badge">Experimentation</span></div>
+
+    <h2>Solution</h2>
+    <ul>
+      <li>Centralized content calendar with automated cross-posting.</li>
+          <li>Dashboard to track retention, CTR, and conversion across platforms.</li>
+          <li>25+ experiments on format, schedule, and engagement hooks.</li>
+    </ul>
+
+    <h2>Impact</h2>
+    <ul>
+      <li>+15% average view duration.</li>
+          <li>20% reduction in planning cycle time.</li>
+          <li>15% increase in brand partnership conversion.</li>
+    
+<div class="cta-row">
+  <a class="btn primary" href="mailto:jon@jonathanledford.com">Discuss this project</a>
+  <a class="btn ghost" href="../Jonathan_Ledford_Resume.pdf">Download resume</a>
+  <a class="btn ghost" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/jonathanledford">LinkedIn</a>
+</div>
+
+    </ul>
+
+    <h2>Visuals</h2>
+<figure style="margin:0">
+      <!-- Replace images/twitch_growth-system.png with your real visual. Keep the filename or update this src. -->
+      <img loading="lazy" src="../images/twitch_growth-system.png" alt="Twitch growth system visual" style="width:100%;border-radius:8px;box-shadow:var(--shadow);" />
+      <figcaption class="muted" style="margin-top:8px;font-size:.9rem;">
+        Twitch growth system visual
+      </figcaption>
+    </figure>
+</div>
+  </div>
+</section>
+
+<footer>
+  <div class="container" style="text-align:center;">
+    <a href="../index.html" class="btn primary">← Back to Portfolio</a>
+  </div>
+<div class="container nextprev"><a class="btn ghost" href="blitz-content-engine.html">← Blitz Content Engine </a><a class="btn ghost" href="headshot-gallery.html">Headshot Gallery →</a></div>
+
+<div class="sticky-cta">
+  <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:10px;">
+    <div class="muted">Ready to chat about this project?</div>
+    <div>
+      <a class="btn primary" href="mailto:jon@jonathanledford.com">Let's talk</a>
+      <a class="btn ghost" href="../Jonathan_Ledford_Resume.pdf">Resume</a>
+    </div>
+  </div>
+</div>
+
+</footer>
+<script defer src="../theme.js"></script>
+</body>
+</html>
