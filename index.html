@@ -185,7 +185,17 @@ a:hover{ text-decoration:none; background-size: 100% 2px; }
   .brand-card { display: flex; flex-direction: column; align-items: center; text-align: center; }
   .brand-logo { max-height: 30px; margin: 0 8px 6px; }
 }
+/* Let grid items actually shrink in a grid (prevents clipping) */
+#home .container > * { min-width: 0; }
 
+/* Stack the hero grid on narrow screens and make the metrics card full width */
+@media (max-width: 820px){
+  #home .container { grid-template-columns: 1fr !important; } /* override the inline 1.2fr .8fr */
+  #home .card.pad { grid-column: 1 / -1; }                       /* metrics spans full width */
+}
+@media (max-width: 820px){
+  #home .container + .container { grid-template-columns: 1fr !important; }
+}
 </style>
 </head>
 <body>
@@ -219,12 +229,13 @@ a:hover{ text-decoration:none; background-size: 100% 2px; }
 <div>
 <h1 class="h1 gradient-title">Product Manager • Producer • Creative Strategist for Gaming & Social Platforms</h1>
 <p style="font-size:1.05rem;color:var(--muted);margin-top:8px;">
-Creating campaigns, content, and features that players actually use and share.
+Creating campaigns, content, and features that players and creators actually want.
 </p>
 <p class="lead">
-CSM | ex-Blitz (2.5M+ MAU) | Twitch Partner: I partner with creators, run live programs, and ship improvements based on feedback and data.
+Certified ScrumMaster (CSM) | ex-Blitz (2.5M+ MAU) | Twitch Partner: I partner with creators, run live programs, and ship improvements based on feedback and data.
 </p>
-<p class="muted" style="font-size:1.05rem;color:var(--muted);margin-top:8px;">Pursuing B.S. in Communications followed by B.S. in Computer Science</p>
+<p class="muted" style="font-size:1.05rem;color:var(--muted);margin-top:8px;">Pursuing a B.S. in Communications, followed by a B.S. in Computer Science.
+</p>
 
 <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
 <a class="btn primary" href="#work">See the work ➜</a>
